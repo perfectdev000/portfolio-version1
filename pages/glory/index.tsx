@@ -4,7 +4,9 @@ import Particles from "react-tsparticles";
 import particlesOptions from "../particles.json";
 import { ISourceOptions } from "tsparticles";
 import Header from "../../components/header/Header"
-import Model1 from './Model1';
+// import Model1 from './Model1';
+import ParticleImg from 'components/particle-image/ParticleImg';
+
 const Home: NextPage = () => {
   return (
     <div className="next">
@@ -21,17 +23,27 @@ const Home: NextPage = () => {
             <Particles options={particlesOptions as ISourceOptions}/>
           </div>        
           <Header />
-          <div className='w-full h-[100vh] rounded-full absolute left-0 top-0 flex justify-center items-center z-10' >
-            <div className='rounded-full' style={{boxShadow: "rgba(250, 250, 250, 0.8) 0px 0px 10px 0px, rgba(250, 250, 250, 0.8) 0px 0px 10px 0px ;"}}>
-              <img src="assets/img/avatar.png" className='w-40 md:w-60 h-40 md:h-60 rounded-full' />
+          <div className='w-full h-[100vh] absolute left-0 top-[70px] md:top-0 grid grid-cols-1 md:grid-cols-2 z-10' >
+            <div className='w-full h-full flex justify-center items-center md:p-16'>
+              <div className='w-full p-4 '>
+                <img src="assets/img/text.png"  />
+              </div>
+            </div>
+            <div className='flex justify-center h-[80%] md:h-[100vh]  md:block'>
+              <div className='h-full'>
+                <div className='h-[25%] w-full'></div>
+                <img src="assets/img/man.png" className='w-auto h-[75%] ' 
+                  // style={{boxShadow: "rgba(250, 250, 250, 0.8) 0px 0px 10px 0px, rgba(250, 250, 250, 0.8) 0px 0px 10px 0px ;"}}
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {/* ----------about-------  */}
         <div id='about' className="glory-about-me grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-black ">
-          <div className='about-me-threejs h-full'>
-            <Model1/>
+          <div className='about-me-particle-image h-full'>
+            <ParticleImg/>
           </div>
           <div className='about-me-description h-full text-white p-16 flex items-center justify-center'>
             <div className=''>
@@ -46,20 +58,8 @@ const Home: NextPage = () => {
         </div>
 
         {/* ----------resume-------  */}
-        <div id='resume' className="glory-resume grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-black ">
-          <div className='resume-threejs h-full'>
-            
-          </div>
-          <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
-            <div className=''>
-              <div className='text-lg font-semibold mb-4'>
-                Creative, Passionate and Efficient Developer
-              </div>
-              <div className='text-base font-normal'>
-                Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
-              </div>
-            </div>
-          </div>
+        <div id='resume' className="glory-resume w-full h-[500px] overflow-visible">
+            <iframe src="/glory/resume" className='w-full h-[500px] overflow-visible '/>;          
         </div>
 
         {/* ----------portfolio-------  */}
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
             <div className=''>
               <div className='text-lg font-semibold mb-4'>
-                Creative, Passionate and Efficient Developer
+                My Portfolio
               </div>
               <div className='text-base font-normal'>
                 Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
           <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
             <div className=''>
               <div className='text-lg font-semibold mb-4'>
-                Creative, Passionate and Efficient Developer
+                My Skill Services
               </div>
               <div className='text-base font-normal'>
                 Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
           <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
             <div className=''>
               <div className='text-lg font-semibold mb-4'>
-                Creative, Passionate and Efficient Developer
+                To Contact Me
               </div>
               <div className='text-base font-normal'>
                 Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.

@@ -1,5 +1,7 @@
 const colors = require('tailwindcss/colors')
-
+plugins: [
+  require('tailwindcss-textshadow')
+],
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -46,6 +48,8 @@ module.exports = {
       28: ['28px', '36px'],
       32: ['32px', '40px'],
       36: ['36px', '42px'],
+      45: ['45px', '55px'],
+      60: ['60px', '70px'],
     },
     fontWeight: {
       hairline: 100,
