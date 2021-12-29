@@ -1,7 +1,5 @@
 const colors = require('tailwindcss/colors')
-plugins: [
-  require('tailwindcss-textshadow')
-],
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",

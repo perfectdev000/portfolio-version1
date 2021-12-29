@@ -26,13 +26,13 @@
   },
   "detectRetina": true,
   "duration": 0,
-  "fpsLimit": 60,
+  "fpsLimit": 40,
   "interactivity": {
     "detectsOn": "window",
     "events": {
       "onClick": {
         "enable": true,
-        "mode": "push"
+        "mode": "repulse"
       },
       "onDiv": {
         "selectors": [],
@@ -42,10 +42,10 @@
       },
       "onHover": {
         "enable": true,
-        "mode": "repulse",
+        "mode": "bubble",
         "parallax": {
           "enable": false,
-          "force": 60,
+          "force": 2,
           "smooth": 10
         }
       },
@@ -65,10 +65,10 @@
       },
       "bubble": {
         "distance": 400,
-        "duration": 2,
+        "duration": 0.3,
         "mix": false,
-        "opacity": 0.8,
-        "size": 40
+        "opacity": 1,
+        "size": 4
       },
       "connect": {
         "distance": 80,
@@ -82,7 +82,7 @@
         "links": {
           "blink": false,
           "consent": false,
-          "opacity": 1
+          "opacity": 0.5
         }
       },
       "light": {
@@ -181,7 +181,7 @@
       }
     },
     "color": {
-      "value": "#ffffff",
+      "value": "#fff",
       "animation": {
         "h": {
           "count": 0,
@@ -257,8 +257,8 @@
         "value": "#ffffff"
       },
       "consent": false,
-      "distance": 150,
-      "enable": true,
+      "distance": 500,
+      "enable": false,
       "frequency": 1,
       "opacity": 0.4,
       "shadow": {
@@ -272,7 +272,7 @@
         "enable": false,
         "frequency": 1
       },
-      "width": 1,
+      "width": 2,
       "warp": false
     },
     "move": {
@@ -290,7 +290,7 @@
       },
       "decay": 0,
       "distance": {},
-      "direction": "none",
+      "direction": "bottom",
       "drift": 0,
       "enable": true,
       "gravity": {
@@ -343,11 +343,11 @@
         "factor": 1000
       },
       "limit": 0,
-      "value": 80
+      "value": 100
     },
     "opacity": {
       "random": {
-        "enable": false,
+        "enable": true,
         "minimumValue": 0.1
       },
       "value": {
@@ -356,7 +356,7 @@
       },
       "animation": {
         "count": 0,
-        "enable": true,
+        "enable": false,
         "speed": 1,
         "sync": false,
         "destroy": "none",
@@ -434,92 +434,30 @@
       }
     },
     "shape": {
-      "options": {
-        "character": {
-          "value": [
-            "t",
-            "s",
-            "P",
-            "a",
-            "r",
-            "t",
-            "i",
-            "c",
-            "l",
-            "e",
-            "s"
-          ],
-          "font": "Verdana",
-          "style": "",
-          "weight": "400",
-          "fill": true
-        },
-        "char": {
-          "value": [
-            "t",
-            "s",
-            "P",
-            "a",
-            "r",
-            "t",
-            "i",
-            "c",
-            "l",
-            "e",
-            "s"
-          ],
-          "font": "Verdana",
-          "style": "",
-          "weight": "400",
-          "fill": true
-        }
-      },
-      "type": "char"
+      "options": {},
+      "type": "circle"
     },
     "size": {
       "random": {
-        "enable": false,
+        "enable": true,
         "minimumValue": 1
       },
-      "value": 16,
+      "value": {
+        "min": 1,
+        "max": 10
+      },
       "animation": {
         "count": 0,
         "enable": false,
-        "speed": 10,
+        "speed": 40,
         "sync": false,
         "destroy": "none",
         "startValue": "random",
-        "minimumValue": 10
+        "minimumValue": 0.1
       }
     },
     "stroke": {
-      "width": 1,
-      "color": {
-        "value": "#ffffff",
-        "animation": {
-          "h": {
-            "count": 0,
-            "enable": false,
-            "offset": 0,
-            "speed": 1,
-            "sync": true
-          },
-          "s": {
-            "count": 0,
-            "enable": false,
-            "offset": 0,
-            "speed": 1,
-            "sync": true
-          },
-          "l": {
-            "count": 0,
-            "enable": false,
-            "offset": 0,
-            "speed": 1,
-            "sync": true
-          }
-        }
-      }
+      "width": 0
     },
     "tilt": {
       "random": {

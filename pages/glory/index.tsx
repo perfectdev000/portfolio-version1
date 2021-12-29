@@ -41,16 +41,16 @@ const Home: NextPage = () => {
         </div>
 
         {/* ----------about-------  */}
-        <div id='about' className="glory-about-me grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-black ">
-          <div className='about-me-particle-image h-full'>
+        <div id='about' className="glory-about-me grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-white h-[500px]">
+          <div className='about-me-particle-image w-full h-[500px] flex justify-center items-center'>
             <ParticleImg/>
           </div>
-          <div className='about-me-description h-full text-white p-16 flex items-center justify-center'>
+          <div className='about-me-description h-full p-16 flex items-center justify-center'>
             <div className=''>
-              <div className='text-lg font-semibold mb-4'>
+              <div className='text-xl text-black font-semibold mb-4'>
                 Creative, Passionate and Efficient Developer
               </div>
-              <div className='text-base font-normal'>
+              <div className='text-lg font-medium text-gray-600'>
                 Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
               </div>
             </div>
@@ -63,20 +63,8 @@ const Home: NextPage = () => {
         </div>
 
         {/* ----------portfolio-------  */}
-        <div id='portfolio' className="glory-resume grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-black ">
-          <div className='resume-threejs h-full'>
-            
-          </div>
-          <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
-            <div className=''>
-              <div className='text-lg font-semibold mb-4'>
-                My Portfolio
-              </div>
-              <div className='text-base font-normal'>
-                Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
-              </div>
-            </div>
-          </div>
+        <div id='portfolio' className="glory-resume bg-white ">
+          
         </div>
 
         {/* ----------skill-------  */}
