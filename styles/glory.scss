@@ -1,0 +1,29 @@
+.glory-main-wraper{
+  .tsparticle{
+    div{
+      width: 100%;
+      height: 100%;
+      .tsparticles-canvas-el{
+        position: relative !important;
+      }
+
+    }
+  }
+  
+  .navbar-header{
+    position: absolute;
+    width: 100%;
+    height: 70px;          
+    // background-image: linear-gradient(to right, #556EE6, #6B21A8);
+    z-index: 11;
+    top:0px;
+    border-bottom: white 1px dashed;
+    &.sticky {        
+        position: fixed !important;            
+        background-color: rgba(0,0,0, 0.8);
+        // box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+        box-shadow: rgba(79, 79, 82, 0.4) 0px 3px 3px 0px;
+        border-bottom: none;
+    }
+} 
+}
