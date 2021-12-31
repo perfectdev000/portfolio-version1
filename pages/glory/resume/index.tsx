@@ -5,22 +5,60 @@ import { ISourceOptions } from "tsparticles";
 
 const Home: NextPage = () => {
   return (
-    <div className='glory-resume-wraper relative tsparticle w-full h-full overflow-visible'>
+    <div className='glory-resume-wraper relative tsparticle w-full h-[100vh] overflow-visible'>
       <Particles options={particlesOptions as ISourceOptions}/>                 
-      <div className='w-full h-full absolute left-0 top-0 grid grid-cols-1 md:grid-cols-2 z-10' >
-        <div className='w-full h-full flex justify-center items-center p-20'>
-          {/* <img src="../assets/img/text.png" className='w-full h-full' /> */}
-        </div>
-        <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
-          <div className=''>
-            <div className='text-lg font-semibold mb-4'>
-              My Resume
+      <div className='w-full h-[100vh] absolute left-0 top-0 z-10 flex items-center justify-center overflow-visible' > 
+        <div className='grid grid-cols-1 md:grid-cols-3 w-full h-full md:h-auto overflow-visible'>
+          <div className='resume-description h-full text-white flex items-center justify-center'>
+            <div className='pt-8 md:pb-8 pl-8 pr-8 md:pr-0'>
+              <div className='text-lg font-semibold mb-3'>
+                Education
+              </div>
+              <div className='text-lg font-semibold mb-3'>
+                <b className='text-red-900'>Bachelor of Computer Science</b><br/>Kuban State Technological University
+              </div>
+              <div className='text-base font-medium'>
+                Kuban State Technological University, also referred to as the Kuban
+                State University of Technology, is a Russian public technical university
+                located in Krasnodar, one of the first higher educational institutions
+                established in the southern region of Russia.<br/>
+                <b>Relevant Coursework</b> : Operating Systems Architecture, Linux/Unix
+                Programming, Usability in Website and Software Design, C++
+                Programming, Web Page Development, Relational Database Design &
+                SQL, Data Engineering, Advanced Software Programming
+              </div>
             </div>
-            <div className='text-base font-normal'>
-              Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
+          </div>       
+          <div className='resume-description h-full text-white flex items-center md:items-start justify-center'>
+            <div className='pt-8 md:pb-8 pl-8 pr-8 md:pr-0'>
+              <div className='text-lg font-semibold mb-3'>
+                Experience | Frontend Developer <b className='text-red-900'>ASPIRITY</b> From 2014 to 2017
+              </div>
+              <div className='text-base font-normal'>
+                <ul>
+                  <li>✔ Implemented responsive web pages and mobile UI from concept through deployment</li>
+                  <li>✔ Implemented efficient and reusable front-end modules that drive complex web applications</li>
+                  <li>✔ Implemented 3D Scene, 3D Animation, Augmented reality(AR) and Virtual Reality(VR) with Three.js and Babylon.js</li>
+                  <li>✔ Implemented new responsive, mobile-first approach which increased mobile traffic by 10%.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>          
+          </div>      
+          <div className='resume-description h-full text-white flex items-center md:items-start justify-center'>
+            <div className='p-8'>
+              <div className='text-lg font-semibold mb-3'>
+                Experience | Full Stack Developer <b className='text-red-900'>Artezio</b> From 2017 to 2020
+              </div>
+              <div className='text-base font-normal'>
+                <ul>
+                  <li>✔ Improved the performance of whole system with efficiency memory usage, multithreading, distributed computing, and other various ideas.</li>
+                  <li>✔ Developed app integration with RESTful and other APIs for Google Maps, social media logins, payment processors, blockchain wallet, and other services.</li>
+                  <li>✔ Implemented various bots, browser automation, and automation scripts.</li>
+                </ul>
+              </div>
+            </div>
+          </div>   
+        </div>        
       </div>
     </div>        
   )
