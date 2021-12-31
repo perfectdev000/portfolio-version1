@@ -12,6 +12,8 @@
   .about-me-particle-image{
     .particle-image{
       canvas{
+        position: relative !important;
+        z-index: 0;
         width: 100%;
         height: 100%;
         min-width: 300px;
@@ -36,4 +38,12 @@
         border-bottom: none;
     }
   } 
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  // background-color: gray;
+  z-index: 20;
 }
