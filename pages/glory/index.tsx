@@ -3,11 +3,25 @@ import Head from 'next/head'
 import Particles from "react-tsparticles";
 import particlesOptions from "../particles.json";
 import { ISourceOptions } from "tsparticles";
+import Slider from 'react-slick';
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import Header from "../../components/header/Header"
 // import Model1 from './Model1';
 import ParticleImg from 'components/particle-image/ParticleImg';
+import SlideImgItem from 'components/SlideImgItem';
+import SkillService from 'components/SkillService';
 
-const Home: NextPage = () => {
+const Home: NextPage = () => {  
+  const slide1_setting = {
+    dots: true, arrows: false, infinite: true, speed: 2500, slidesToShow: 5, slidesToScroll: 1, autoplay: true, autoplaySpeed: 10,    
+  };
+  const slide2_setting = {
+    dots: true, arrows: false, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000,    
+  };
+  
   return (
     <div className="next">
       <Head>
@@ -37,18 +51,18 @@ const Home: NextPage = () => {
         </div>
 
         {/* ----------about-------  */}
-        <div id='about' className="glory-about-me grid grid-cols-1 md:grid-cols-2 bg-white ">
-          <div className='about-me-particle-image w-full h-full flex justify-center items-center p-8'>
-            {/* <div className='h-full p-4'> */}
+        <div id='about' className="glory-about-me md:flex bg-white ">
+          <div className='about-me-particle-image w-full md:w-2/6  flex justify-center items-center p-8'>
+            <div className=''>
               <ParticleImg/>
-            {/* </div> */}
+            </div>
           </div>
-          <div className='about-me-description h-full px-8 md:pt-8 pb-8 flex items-center justify-center'>
+          <div className='about-me-description w-full md:w-4/6 h-full px-4 md:pt-4 pb-4 flex items-center justify-center'>
             <div className='p-4'>
-              <div className='text-lg md:text-xl text-black font-semibold mb-4'>
+              <div className='text-28 md:text-45 text-black font-bold mb-4'>
                 Creative, Passionate and Efficient Developer
               </div>
-              <div className='text-base md:text-lg font-medium text-gray-600'>
+              <div className='text-base md:text-xl font-bold text-gray-600'>
                 Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
               </div>
             </div>
@@ -56,38 +70,56 @@ const Home: NextPage = () => {
         </div>
 
         {/* ----------resume-------  */}
-        <div id='resume' className="glory-resume w-full h-[500px] overflow-visible">
-            <iframe src="/glory/resume" className='w-full h-[100vh] md:h-[500px] overflow-visible '/>;          
+        <div id='resume' className="glory-resume w-full h-full md:h-[500px] overflow-visible">
+            <iframe src="/glory/resume" className='w-full h-[100vh] md:h-[500px] overflow-visible '/>          
         </div>
 
         {/* ----------portfolio-------  */}
-        <div id='portfolio' className="glory-resume bg-white ">
-          
-        </div>
-
-        {/* ----------skill-------  */}
-        <div id='skill' className="glory-resume grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-black ">
-          <div className='resume-threejs h-full'>
+        <div id='portfolio' className="glory-portfolio bg-white flex justify-center items-center px-4 pt-4 pb-8">
+          <div className='w-full h-full'>
+            <div className='title w-full text-center font-bold text-32 md:text-45 text-gray-700' 
+              // style={{color:'#FF6347'}}
+            >
+              Portfolio
+            </div>
+            <div className='h-2 md:h-4'></div>
+            <div className='w-full hidden md:block'>            
+              <Slider {...slide1_setting}>                
+                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={""} skillContent={""} />                
+              </Slider>
+            </div>
             
-          </div>
-          <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
-            <div className=''>
-              <div className='text-lg font-semibold mb-4'>
-                My Skill Services
-              </div>
-              <div className='text-base font-normal'>
-                Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
-              </div>
+            <div className='w-full md:hidden'>            
+              <Slider {...slide2_setting}>                
+                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={""} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={""} skillContent={""} />                
+              </Slider>
             </div>
           </div>
         </div>
 
+        {/* ----------skill-------  */}
+        <div id='skill' className="glory-skill ">
+          <SkillService/>
+        </div>
+
         {/* ----------contact-------  */}
-        <div id='contact' className="glory-resume grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 bg-black ">
-          <div className='resume-threejs h-full'>
-            
+        <div id='contact' className="glory-contact md:flex bg-black">
+          <div className='w-2/6 flex justify-center items-center p-8'>
+            <img src='assets/img/contact.png' className='w-full h-full'/>            
           </div>
-          <div className='resume-description h-full text-white p-16 flex items-center justify-center'>
+          <div className='h-full w-4/6 text-white p-16 flex items-center justify-center'>
             <div className=''>
               <div className='text-lg font-semibold mb-4'>
                 To Contact Me
