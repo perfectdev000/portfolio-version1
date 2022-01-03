@@ -1,6 +1,6 @@
 {
   "name": "glory",
-  "homepage": "https://gloriousdevops.github.io/glory",
+  "homepage": "https://perfectdev000.github.io/glory",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
