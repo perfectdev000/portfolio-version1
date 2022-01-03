@@ -14,13 +14,15 @@ module.exports = {
         current: 'currentColor',
         black: '#000',
         white: '#fff',
+        red:{
+          DEFAULT: '#ff0000',
+        },
         blue: {
           DEFAULT: '#556EE6',
         },
         purple: {
           DEFAULT: '#6B21A8',
-        },
-        red: colors.red,
+        },        
       },
       width:{
         '300':'300px',
