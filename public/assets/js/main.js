@@ -1,19 +1,6 @@
 (function ($) {
   "use strict";
-  
-  // loader
-  // var loader = function () {
-  //     setTimeout(function () {
-  //         if ($('#loader').length > 0) {
-  //             $('#loader').removeClass('show');
-  //         }
-  //     }, 1);
-  // };
-  // loader();  
-  
-  // Initiate the wowjs
-  new WOW().init();  
-  
+
   // Back to top button
   $(window).scroll(function () {
       if ($(this).scrollTop() > 200) {
@@ -56,11 +43,5 @@
       });
   }  
   
-  // Skills
-  // $('.skills').waypoint(function () {
-  //     $('.progress .progress-bar').each(function () {
-  //         $(this).css("width", $(this).attr("aria-valuenow") + '%');
-  //     });
-  // }, {offset: '80%'});
 })(jQuery);
 

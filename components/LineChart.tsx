@@ -8,7 +8,8 @@ const series =  [
   { name: "Food",data: [ 31, 23, 49, 62, 28 ]},
   { name: "Clothes",data: [18, 34, 19, 33, 45 ]} 
 ];
-const settings =  {
+let data:{};
+data =  {
   chart: { height: 350,type: 'line',zoom: {enabled: false}},
   dataLabels: {enabled: false},
   stroke: {curve: 'smooth'},
@@ -20,7 +21,7 @@ const settings =  {
 export default class LineChart extends React.Component<{},{}> {    
   render() {    
     return (      
-      <Chart options={settings} series={series} type="line"  />         
+      <Chart options={data} series={series} type="line"  />         
     );
   }
 }
