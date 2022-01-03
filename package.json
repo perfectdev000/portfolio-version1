@@ -1,10 +1,9 @@
 {
   "name": "glory",
-  "homepage": "https://perfectdev000.github.io/glory",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
-    "build": "next build && next export",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
