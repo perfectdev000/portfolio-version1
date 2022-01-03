@@ -262,7 +262,7 @@ class Home extends React.Component<{},{}> {
                 </Slider>
               </div>
             </div>
-            <iframe src='/resume' className='absolute left-0 top-0 w-full h-full z-0'/>
+            <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/>
           </div>
 
           {/* ----------skill-------  */}
