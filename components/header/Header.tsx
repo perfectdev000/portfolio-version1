@@ -17,9 +17,9 @@ const Header = () => {
   const navbarClasses = (scrolled)?'navbar-header sticky':'navbar-header';
   return (
     <div className={navbarClasses}>
-      <div className="navbar w-full h-full flex justify-around items-center text-white ">
+      <div className="navbar-nav w-full h-full flex justify-around items-center text-white ">
         <Link href="#here">
-          <a>
+          <a className="nav-item nav-link active">
             <div className="flex justify-center items-center hover:cursor-pointer">
               <div className="md:mr-4">            
                 <FaHome className='w-8 h-8'/>
@@ -30,7 +30,7 @@ const Header = () => {
         </Link>
 
         <Link href="#about">
-          <a>
+          <a className="nav-item nav-link">
             <div className="flex justify-center items-center hover:cursor-pointer">
               <div className="md:mr-4">            
                 <FaPortrait className='w-8 h-8'/>
@@ -41,7 +41,7 @@ const Header = () => {
         </Link>
         
         <Link href="#resume">
-          <a>
+          <a className="nav-item nav-link">
             <div className="flex justify-center items-center hover:cursor-pointer">
               <div className="md:mr-4">            
                 <FaFileInvoice className='w-8 h-8'/>
@@ -52,7 +52,7 @@ const Header = () => {
         </Link>
         
         <Link href="#portfolio">
-          <a>
+          <a className="nav-item nav-link">
           <div className="flex justify-center items-center hover:cursor-pointer">
             <div className="md:mr-4">            
               <FaCamera className='w-8 h-8'/>
@@ -63,7 +63,7 @@ const Header = () => {
         </Link>
 
         <Link href="#skill">
-          <a>
+          <a className="nav-item nav-link">
             <div className="flex justify-center items-center hover:cursor-pointer">
               <div className="md:mr-4">            
                 <FaServicestack className='w-8 h-8'/>
@@ -74,7 +74,7 @@ const Header = () => {
         </Link>
 
         <Link href="#contact">
-          <a>
+          <a className="nav-item nav-link">
             <div className="flex justify-center items-center hover:cursor-pointer">
               <div className="md:mr-4">            
                 <FaMailBulk className='w-8 h-8'/>
