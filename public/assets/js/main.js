@@ -10,7 +10,7 @@
       }
   });
   $('.back-to-top').click(function () {
-      $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+      $('html, body, main').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
       return false;
   });
     
@@ -30,18 +30,6 @@
           }
       }
   });  
-  
-  // Typed Initiate
-  if ($('.hero .hero-text h2').length == 1) {
-      var typed_strings = $('.hero .hero-text .typed-text').text();
-      var typed = new Typed('.hero .hero-text h2', {
-          strings: typed_strings.split(', '),
-          typeSpeed: 100,
-          backSpeed: 20,
-          smartBackspace: false,
-          loop: true
-      });
-  }  
   
 })(jQuery);
 

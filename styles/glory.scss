@@ -51,7 +51,28 @@
     width: 100%;
     margin-top: 20px;
     padding: 4px 8px;
-  } 
+  }
+  .back-to-top {
+    background-color: red;
+    border:solid 2px white;
+    color: #ffffff;
+    position: fixed;
+    display: none;    
+    padding: 10px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 20;
+    transition: ease-out 0.5s;
+  }
+  .back-to-top:hover {
+    background-color: white;
+    border:solid 2px red;
+    color: red;
+  }
+
 }
 canvas {
   position: fixed;

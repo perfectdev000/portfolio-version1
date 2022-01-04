@@ -1,24 +1,23 @@
-// import type { NextPage } from 'next'
 import React from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
-// import * as THREE from "three";
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { FaAngleUp, } from 'react-icons/fa';
+
 import Slider from 'react-slick';
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "../../components/header/Header"
-// import Model1 from './Model1';
+
 import ParticleImg from 'components/particle-image/ParticleImg';
 import SlideImgItem from 'components/SlideImgItem';
 import SkillService from 'components/SkillService';
  
 const slide1_setting = {
-  dots: true, arrows: false, infinite: true, speed: 2500, slidesToShow: 5, slidesToScroll: 1, autoplay: true, autoplaySpeed: 10,    
+  dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 4, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,    
 };
 const slide2_setting = {
-  dots: true, arrows: false, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 2000,    
+  dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,
 };
 class Home extends React.Component<{},{}> {   
   // componentDidMount(){    
@@ -239,26 +238,26 @@ class Home extends React.Component<{},{}> {
               </div>
               <div className='h-2 md:h-4'></div>
               <div className='w-full hidden md:block'>            
-                <Slider {...slide1_setting}>                
-                  <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={""} skillContent={""} />                
+                <Slider {...slide1_setting}>
+                  <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={""} />
                 </Slider>
               </div>
               
               <div className='w-full md:hidden'>            
-                <Slider {...slide2_setting}>                
-                  <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={""} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={""} skillContent={""} />                
+                <Slider {...slide2_setting}>
+                  <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={""} />
+                  <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={""} />
                 </Slider>
               </div>
             </div>
@@ -306,6 +305,8 @@ class Home extends React.Component<{},{}> {
             </div>
           </div>
 
+          {/* -- Back to top button -- */}
+          <a href="#" className="btn back-to-top" ><FaAngleUp /></a>
         </main>
         {/* <Script src="assets/js/jquery-3.4.1.min.js"/> */}
         <Script src="https://code.jquery.com/jquery-3.4.1.min.js"/>        
