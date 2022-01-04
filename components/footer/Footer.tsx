@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { FaMailBulk, FaSkype, FaGithub, FaDiscord, FaTelegram, FaLinkedin } from 'react-icons/fa';
-const Footer = () => {
+const Footer = ({}) => {
+   
+  const sendEmail = () => {    
+    window.open("mailto:darkrut22@gmail.com?subject=About Project");
+  };
   return (
     <div className="Footer bg-red border-t border-dashed w-full h-16 flex items-center">
       <div className='w-full flex justify-around items-center text-white w-full h-full'>
         <Link href={"#"}>
-          <a target="_blank" className='h-full'><FaMailBulk className='w-full h-full p-4 hover:p-3'/></a>
+          <a className='h-full' onClick={()=>sendEmail()}><FaMailBulk className='w-full h-full p-4 hover:p-3'/></a>
         </Link>
         <Link href={"https://join.skype.com/invite/xZi9LkzgQzuG"}>
           <a target="_blank" className='h-full'><FaSkype className='w-full h-full p-4 hover:p-3'/></a>
