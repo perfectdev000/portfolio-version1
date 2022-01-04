@@ -181,7 +181,7 @@ class Home extends React.Component<Props, ContactState> {
                 </div>                
                 <div className='content-col'>
                   <div className='right-img'>
-                    <img src="assets/img/man.png" className=''/>
+                    <img src="assets/img/man1.png" className=''/>
                   </div>
                 </div>
               </div>

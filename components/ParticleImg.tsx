@@ -50,7 +50,7 @@ export default function ParticleImg() {
   return (
     <div className="particle-image" >
       <ParticleImage
-        src={"assets/img/particle.png"}
+        src={"assets/img/particle1.png"}
         // width={Number(innerWidth)}
         // height={Number(innerHeight)}
         scale={1.0}
