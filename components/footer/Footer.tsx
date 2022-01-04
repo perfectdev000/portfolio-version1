@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="Footer bg-red border-t border-dashed w-full h-16 flex items-center">
       <div className='w-full flex justify-around items-center text-white w-full h-full'>
-        <Link href={""}>
+        <Link href={"#"}>
           <a target="_blank" className='h-full'><FaMailBulk className='w-full h-full p-4 hover:p-3'/></a>
         </Link>
         <Link href={"https://join.skype.com/invite/xZi9LkzgQzuG"}>
@@ -17,10 +17,10 @@ const Footer = () => {
         <Link href={"https://discord.gg/YgNKvera"}>
           <a target="_blank" className='h-full'><FaDiscord className='w-full h-full p-4 hover:p-3'/></a>
         </Link>
-        <Link href={""}>
+        <Link href={"#"}>
           <a target="_blank" className='h-full'><FaTelegram className='w-full h-full p-4 hover:p-3'/></a>
         </Link>
-        <Link href={""}>
+        <Link href={"#"}>
           <a target="_blank" className='h-full'><FaLinkedin className='w-full h-full p-4 hover:p-3'/></a>
         </Link>
       </div>

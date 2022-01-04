@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
 
@@ -19,16 +19,16 @@ import SlideImgItem from 'components/SlideImgItem';
 import SkillViewChart from 'components/SkillViewChart';
 import SkillsView from 'components/SkillsView';
 
+type Props = {  
+}
 
- 
-const slide1_setting = {
-  dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 4, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,    
-};
-const slide2_setting = {
-  dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,
-};
-
-class Home extends React.Component<{},{}> {  
+type ContactState = {
+  yourname:string,
+  email:string,
+  subject:string,
+  message:string,
+}
+class Home extends React.Component<Props, ContactState> { 
 
   // componentDidMount(){    
   //   const scene = new THREE.Scene()
@@ -139,16 +139,26 @@ class Home extends React.Component<{},{}> {
   //   window.scrollTo({ top: 0, behavior: 'smooth' })
   //   animate()
   // }
+
   form = React.createRef<HTMLFormElement>();
-  sendEmail = (e: { preventDefault: () => void; }) => {
-    console.log("submit");
-    e.preventDefault();
-    emailjs.sendForm('service_vtwfdya', emailKey.TEMPLATE_ID, this.form.current, emailKey.USER_ID)
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+  
+  constructor(props:Props) {
+    super(props)
+  }
+  state: ContactState = {yourname:'', email:'', subject:'', message:''};  
+  
+  handleChange = (event: { target: { name: string; value: string; }; }) => {
+    let inputname:string = event.target.name
+    let inputvalue:string = event.target.value;
+    if (inputname==='yourname')  this.setState({yourname:inputvalue})
+    if (inputname==='email')  this.setState({email:inputvalue})
+    if (inputname==='subject')  this.setState({subject:inputvalue})
+    if (inputname==='message')  this.setState({message:inputvalue})
+  }  
+  sendEmail = () => {
+    console.log("submit");    
+    console.log(this.state.yourname);
+    window.open("mailto:jinwangdev531@gmail.com?subject=" + this.state.subject + "&" + this.state.message + "\n" + this.state.yourname);
   };
 
   render(){
@@ -171,7 +181,7 @@ class Home extends React.Component<{},{}> {
                   <div>
                     <img src="assets/img/text.png"/>                  
                     <div className='md:w-full flex justify-center'>
-                      <button className="btn bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-3" type="submit" id="sendMessageButton"
+                      <button className="btn btn-here bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-3" type="submit" id="sendMessageButton"
                         style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
                     </div>
                   </div>
@@ -264,41 +274,26 @@ class Home extends React.Component<{},{}> {
           </div>
 
           {/* ----------portfolio-------  */}
-          <div id='portfolio' className="glory-portfolio bg-transparent flex justify-center items-center px-4 pt-4 pb-8 relative">
+          <div id='portfolio' className="glory-portfolio bg-transparent flex justify-center items-center p-8 relative">
             <div className='w-full h-full z-10'>              
-              <div className='title w-full text-center font-bold text-32 md:text-45 text-white'>
+              <div className='title w-full text-center font-bold text-32 md:text-45 text-white mb-8'>
                 My Excellent Portfolio
               </div>
-              <div className='h-2 md:h-4'></div>
-              <div className='w-full hidden md:block'>            
-                <Slider {...slide1_setting}>
-                  <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={""} />
-                </Slider>
-              </div>
-              
-              <div className='w-full md:hidden'>            
-                <Slider {...slide2_setting}>
-                  <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={""} />
-                  <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={""} />
-                </Slider>
+              <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
+                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={""} />
               </div>
             </div>
             <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/>
           </div>
 
           {/* ----------skill-------  */}
-          <div id='skill' className="glory-skill ">
+          <div id='skill' className="glory-skill p-8">
             <SkillViewChart/>
             <SkillsView/>
           </div>
@@ -310,27 +305,23 @@ class Home extends React.Component<{},{}> {
                 <img src='assets/img/contact.png' className='w-full h-full p-8'/>   
               </div>
               <div className='h-full w-full md:w-4/6 text-base font-medium text-white p-8 flex items-center justify-center'>
-                  <div className="contact-form w-full h-full">
+                  <div className="contact-form w-full h-full mr-40">
                     <div id="success"></div>
-                    <form name="sentMessage w-full h-full" id="contactForm" ref={this.form} onSubmit={this.sendEmail}>
+                    <form name="sentMessage w-full h-full" id="contactForm" ref={this.form} >
                         <div className="control-group">
-                          <input type="text" className="form-control" id="name" placeholder="Your Name" data-validation-required-message="Please enter your name" />
+                          <input type="text" className="form-control" name="yourname" id="name" placeholder="Your Name" data-validation-required-message="Please enter your name"  onChange={this.handleChange.bind(this)}/>
                           <p className="help-block"></p>
                         </div>
                         <div className="control-group">
-                          <input type="email" className="form-control" id="email" placeholder="Your Email" data-validation-required-message="Please enter your email" />
+                          <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" data-validation-required-message="Please enter a subject"  onChange={this.handleChange.bind(this)}/>
                           <p className="help-block"></p>
                         </div>
                         <div className="control-group">
-                          <input type="text" className="form-control" id="subject" placeholder="Subject" data-validation-required-message="Please enter a subject" />
-                          <p className="help-block"></p>
-                        </div>
-                        <div className="control-group">
-                          <textarea className="form-control" id="message" placeholder="Message" data-validation-required-message="Please enter your message" rows={3}></textarea>
+                          <textarea className="form-control" name="message" id="message" placeholder="Message" data-validation-required-message="Please enter your message" rows={3} onChange={this.handleChange.bind(this)}></textarea>
                           <p className="help-block"></p>
                         </div>
                         <div className='mt-8 w-full flex justify-center md:justify-start'>
-                          <button className="btn w-auto bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-2" type="submit" id="sendMessageButton"
+                          <button className="btn w-auto bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-2" type="button" id="sendMessageButton" onClick={()=>this.sendEmail()}
                             style={{transition: "ease-out 0.3s"}} >Send Message</button>
                         </div>
                     </form>

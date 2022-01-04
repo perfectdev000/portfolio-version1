@@ -1,18 +1,24 @@
 (function ($) {
   "use strict";
 
-  // Back to top button
-  $(window).scroll(function () {
-      if ($(this).scrollTop() > 200) {
-          $('.back-to-top').fadeIn('slow');
-      } else {
-          $('.back-to-top').fadeOut('slow');
-      }
-  });
-  $('.back-to-top').click(function () {
-      $('html, body, main').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-      return false;
-  });
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body, main').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+    
+    $('.btn-here').click(function () {
+        $('html, body, main').animate({scrollTop: 4000}, 1500, 'easeInOutExpo');
+        return false;
+    });
     
   // Smooth scrolling on the navbar links
   $(".nav-item").on('click', function (event) {
