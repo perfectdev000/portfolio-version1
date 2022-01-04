@@ -7,7 +7,8 @@ import Slider from 'react-slick';
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Header from "../../components/header/Header"
+import Header from "components/header/Header"
+import Footer from 'components/footer/Footer';
 
 import ParticleImg from 'components/particle-image/ParticleImg';
 import SlideImgItem from 'components/SlideImgItem';
@@ -142,23 +143,24 @@ class Home extends React.Component<{},{}> {
         
         <main className="glory-main-wraper relative" data-spy="scroll" data-target=".navbar" data-offset="70">
           {/* ----------here-------  */}
-          <div id='here' className='w-full h-[100vh]'>
-            <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-[100vh]'/>
+          <div id='here' className='w-full h-[100vh] relative'>
+            <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-[100vh]' style={{zIndex:'-1'}}/>
             <Header />
-            <div className='w-full h-[100vh] absolute left-0 top-[70px] md:top-0 grid grid-cols-1 md:grid-cols-2 z-10' >
-              <div className='w-full h-full flex justify-center items-center md:p-16'>
-                <div>
-                  <img src="assets/img/text.png"/>                  
-                  <div className='w-full flex justify-center'>
-                    <button className="btn bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-3" type="submit" id="sendMessageButton"
-                      style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
+            <div className='flex justify-center items-end h-[100vh] absolute top-0 left-0 w-full'>
+              <div className='content'>
+                <div className='content-col'>
+                  <div>
+                    <img src="assets/img/text.png"/>                  
+                    <div className='md:w-full flex justify-center'>
+                      <button className="btn bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-3" type="submit" id="sendMessageButton"
+                        style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className='flex justify-center h-[40vh] md:h-[100vh]'>
-                <div className='md:h-full'>
-                  <div className='hidden md:block h-[25%] w-full'></div>
-                  <img src="assets/img/man.png" className='w-auto h-full md:h-[75%] '/>                  
+                </div>                
+                <div className='content-col'>
+                  <div className='right-img'>
+                    <img src="assets/img/man.png" className=''/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,7 +192,7 @@ class Home extends React.Component<{},{}> {
                       <div className='text-lg font-semibold mb-3 text-gray-700'>
                         <b className='text-red'>Bachelor of Computer Science</b><br/>Kuban State Technological University
                       </div>
-                      <div className='text-base font-medium'>
+                      <div className='text-base font-normal'>
                         Kuban State Technological University, also referred to as the Kuban
                         State University of Technology, is a Russian public technical university
                         located in Krasnodar, one of the first higher educational institutions
@@ -314,6 +316,7 @@ class Home extends React.Component<{},{}> {
 
           {/* -- Back to top button -- */}
           <a href="#" className="btn back-to-top" ><FaAngleUp /></a>
+          <Footer/>
         </main>
         {/* <Script src="assets/js/jquery-3.4.1.min.js"/> */}
         <Script src="https://code.jquery.com/jquery-3.4.1.min.js"/>        

@@ -52,6 +52,39 @@
     margin-top: 20px;
     padding: 4px 8px;
   }
+  #here{
+    max-height: 100vh;
+    .content{
+      min-height: calc(100vh - 70px);
+      max-height: calc(100vh - 70px);
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .content-col{
+        width: 50vw;
+        height: 100%;        
+        min-height: calc(100vh - 70px);
+        max-height: calc(100vh - 70px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .right-img{
+          min-height: calc(100vh - 70px);
+          max-height: calc(100vh - 200px);          
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          width: 100%;
+          padding: 20px 20px 0 20px;
+          img{
+            max-height: 600px;
+            max-width: 600px;
+          }
+        }
+      }
+    }
+  }
   .back-to-top {
     background-color: red;
     border:solid 2px white;
@@ -63,7 +96,7 @@
     line-height: 1;
     font-size: 22px;
     right: 15px;
-    bottom: 15px;
+    bottom: 75px;
     z-index: 20;
     transition: ease-out 0.5s;
   }
@@ -79,6 +112,42 @@ canvas {
   top: 0;
   left: 0;
   background-color: transparent;
-  // background-color: gray;
   z-index: 20;
+}
+@media only all and (max-width: 768px) {  
+  .glory-main-wraper{
+    #here{
+      max-height: 100vh;
+      .content{
+        min-height: calc(100vh - 70px);
+        max-height: calc(100vh - 70px);
+        width: 100vw;
+        display: inline;
+        justify-content: center;
+        position: relative;
+        .content-col{
+          width: 100vw;          
+          min-height: calc(100vh / 2 - 35px);
+          max-height: calc(100vh /2 - 35px);          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          .right-img{
+            min-height: calc(100vh / 2 - 35px);
+            max-height: calc(100vh /2 - 35px);            
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            padding: 20px 20px 0 20px;
+            img{
+              min-height: calc(100vh / 2 - 70px);
+              max-height: calc(100vh /2 - 70px); 
+            }
+          }
+        }
+      }
+    }
+  }
 }
