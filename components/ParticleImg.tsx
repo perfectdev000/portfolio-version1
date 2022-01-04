@@ -48,7 +48,7 @@ export default function ParticleImg() {
   const { innerWidth, innerHeight } = useWindowSize();
   // innerWidth 
   return (
-    <div className="particle-image ">
+    <div className="particle-image" >
       <ParticleImage
         src={"assets/img/particle.png"}
         // width={Number(innerWidth)}

@@ -1,19 +1,25 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
+
+import emailjs from 'emailjs-com'
+import emailKey from './emailkey'
+
 import { FaAngleUp, } from 'react-icons/fa';
 
 import Slider from 'react-slick';
-// Import css files
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "components/header/Header"
 import Footer from 'components/footer/Footer';
 
-import ParticleImg from 'components/particle-image/ParticleImg';
+import ParticleImg from 'components/ParticleImg';
 import SlideImgItem from 'components/SlideImgItem';
 import SkillViewChart from 'components/SkillViewChart';
 import SkillsView from 'components/SkillsView';
+
+
  
 const slide1_setting = {
   dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 4, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,    
@@ -21,7 +27,9 @@ const slide1_setting = {
 const slide2_setting = {
   dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 1, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,
 };
-class Home extends React.Component<{},{}> {   
+
+class Home extends React.Component<{},{}> {  
+
   // componentDidMount(){    
   //   const scene = new THREE.Scene()
   //   // scene.background = new THREE.Color( 0xff0000 );
@@ -131,6 +139,17 @@ class Home extends React.Component<{},{}> {
   //   window.scrollTo({ top: 0, behavior: 'smooth' })
   //   animate()
   // }
+  form = React.createRef<HTMLFormElement>();
+  sendEmail = (e: { preventDefault: () => void; }) => {
+    console.log("submit");
+    e.preventDefault();
+    emailjs.sendForm('service_vtwfdya', emailKey.TEMPLATE_ID, this.form.current, emailKey.USER_ID)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   render(){
     return (
@@ -167,16 +186,22 @@ class Home extends React.Component<{},{}> {
           </div>
 
           {/* ----------about-------  */}
-          <div id='about' className="glory-about-me bg-white ">
-            <div className='text-xl md:text-45 text-center text-gray-700 font-bold p-8'>Creative, Passionate and Efficient Developer</div>
+          <div id='about' className="glory-about-me bg-white ">            
             <div className='md:flex md:items-center'>
-              <div className='about-me-particle-image w-full md:w-2/6 px-8 md:py-8  flex justify-center items-center'>
+              <div className='about-me-particle-image w-full md:w-2/6 p-8  flex justify-center items-center'>                
                 <ParticleImg/>                
               </div>
-              <div className='about-me-description w-full md:w-4/6 h-full p-8 flex items-center justify-center'>                
-                  <div className='text-base md:text-xl font-normal text-gray-500'>
-                    Creative, Passionate and Efficient full stack developer with over 10 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
+              <div className='about-me-description w-full md:w-4/6 h-full p-8 flex items-center justify-center'>
+                <div>
+                  <div className='text-xl md:text-40 text-center text-gray-700 font-bold mb-8'>Creative, Passionate and Efficient Developer</div>
+                  <div className='text-base md:text-lg font-normal text-gray-500 '>
+                    Creative, Passionate and Efficient Sofrware developer with over 10 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks. Implemented 3D Web, Virtual Reality with Three.js and WebGL.<br/>
+                    Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance.<br/>
+                    Have strong and advanced algorithim logic.<br/>
+                    And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling.<br/> 
+                    I prefer to build trust and a long-term relationships.
                   </div>
+                </div>
               </div>
             </div>
           </div>
@@ -287,7 +312,7 @@ class Home extends React.Component<{},{}> {
               <div className='h-full w-full md:w-4/6 text-base font-medium text-white p-8 flex items-center justify-center'>
                   <div className="contact-form w-full h-full">
                     <div id="success"></div>
-                    <form name="sentMessage w-full h-full" id="contactForm">
+                    <form name="sentMessage w-full h-full" id="contactForm" ref={this.form} onSubmit={this.sendEmail}>
                         <div className="control-group">
                           <input type="text" className="form-control" id="name" placeholder="Your Name" data-validation-required-message="Please enter your name" />
                           <p className="help-block"></p>
@@ -306,7 +331,7 @@ class Home extends React.Component<{},{}> {
                         </div>
                         <div className='mt-8 w-full flex justify-center md:justify-start'>
                           <button className="btn w-auto bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-2" type="submit" id="sendMessageButton"
-                            style={{transition: "ease-out 0.3s"}}>Send Message</button>
+                            style={{transition: "ease-out 0.3s"}} >Send Message</button>
                         </div>
                     </form>
                   </div>
