@@ -273,13 +273,17 @@ class Home extends React.Component<Props, ContactState> {
                 My Excellent Portfolio
               </div>
               <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
-                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={""} />
-                <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={""} />
-                <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={""} />
-                <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={""} />
-                <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={""} />
-                <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={""} />
-                <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={""} />
+                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + Node.js + Chart.js + TailwindCSS + SCSS + GraphQL"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={"Three.js + WebGL"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/alethea.png"} imgLink={"https://alethea.ai/"} skillContent={"React + Node.js + WebGL + Video.js + BlockChain + NFT"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={"Backbone.js + particle.js + GoogleAPI + Python + Django"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={"BootStrap4 + particle.js + PHP"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={"React + Next.js + Node.js"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={"React + Chart.js + BlockChain + UltraNote"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/bluestarcoffeeroasters.png"} imgLink={"https://bluestarcoffeeroasters.com/"} skillContent={"React + tailwindCSS + Shopify"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/lusion.png"} imgLink={"https://lusion.co/"} skillContent={"Three.js + WebGL"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/dnb.png"} imgLink={"https://dnb.ru/"} skillContent={"BootStrap + Python/Django"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={"PHP/Laravel"} />
               </div>
             </div>
             <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/>
@@ -298,7 +302,7 @@ class Home extends React.Component<Props, ContactState> {
                 <img src='assets/img/contact.png' className='w-full h-full p-8'/>   
               </div>
               <div className='h-full w-full md:w-4/6 text-base font-medium text-white p-8 flex items-center justify-center'>
-                  <div className="contact-form w-full h-full mr-40">
+                  <div className="contact-form w-full h-full md:mr-40">
                     <div id="success"></div>
                     <form name="sentMessage w-full h-full" id="contactForm" ref={this.form} >
                         <div className="control-group">
