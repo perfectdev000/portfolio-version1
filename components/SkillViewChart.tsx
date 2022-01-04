@@ -2,7 +2,7 @@ import * as React from "react";
 import PieChart1 from "./PieChart1";
 import PieChart2 from "./PieChart2";
 import LineChart from "./LineChart";
-export default function SkillService() {  
+export default function SkillViewChart() {  
   return (
     <div className="w-full h-full bg-white">
       <div className='title w-full text-center font-bold text-32 md:text-45 text-gray-700 p-4' >Skill Service</div>

@@ -11,7 +11,8 @@ import Header from "../../components/header/Header"
 
 import ParticleImg from 'components/particle-image/ParticleImg';
 import SlideImgItem from 'components/SlideImgItem';
-import SkillService from 'components/SkillService';
+import SkillViewChart from 'components/SkillViewChart';
+import SkillsView from 'components/SkillsView';
  
 const slide1_setting = {
   dots: true, arrows: false, infinite: true, speed: 3000, slidesToShow: 4, slidesToScroll: 1, autoplay: true, autoplaySpeed: 3000,    
@@ -145,13 +146,19 @@ class Home extends React.Component<{},{}> {
             <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-[100vh]'/>
             <Header />
             <div className='w-full h-[100vh] absolute left-0 top-[70px] md:top-0 grid grid-cols-1 md:grid-cols-2 z-10' >
-              <div className='w-full h-full flex justify-center items-center md:p-16'>              
-                  <img src="assets/img/text.png"  />              
+              <div className='w-full h-full flex justify-center items-center md:p-16'>
+                <div>
+                  <img src="assets/img/text.png"/>                  
+                  <div className='w-full flex justify-center'>
+                    <button className="btn bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-3" type="submit" id="sendMessageButton"
+                      style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
+                  </div>
+                </div>
               </div>
               <div className='flex justify-center h-[40vh] md:h-[100vh]'>
                 <div className='md:h-full'>
                   <div className='hidden md:block h-[25%] w-full'></div>
-                  <img src="assets/img/man.png" className='w-auto h-full md:h-[75%] '/>
+                  <img src="assets/img/man.png" className='w-auto h-full md:h-[75%] '/>                  
                 </div>
               </div>
             </div>
@@ -166,9 +173,8 @@ class Home extends React.Component<{},{}> {
               </div>
               <div className='about-me-description w-full md:w-4/6 h-full p-8 flex items-center justify-center'>                
                   <div className='text-base md:text-xl font-normal text-gray-500'>
-                    Creative, Passionate and Efficient full stack developer with over 9 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
+                    Creative, Passionate and Efficient full stack developer with over 10 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance. Implemented 3D Scene, Virtual Reality with Three.js and Babylon.js. And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks.
                   </div>
-                
               </div>
             </div>
           </div>
@@ -266,7 +272,8 @@ class Home extends React.Component<{},{}> {
 
           {/* ----------skill-------  */}
           <div id='skill' className="glory-skill ">
-            <SkillService/>
+            <SkillViewChart/>
+            <SkillsView/>
           </div>
 
           {/* ----------contact-------  */}
@@ -295,8 +302,8 @@ class Home extends React.Component<{},{}> {
                           <textarea className="form-control" id="message" placeholder="Message" data-validation-required-message="Please enter your message" rows={3}></textarea>
                           <p className="help-block"></p>
                         </div>
-                        <div className='mt-8 w-full'>
-                          <button className="btn w-full md:w-auto bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-2" type="submit" id="sendMessageButton"
+                        <div className='mt-8 w-full flex justify-center md:justify-start'>
+                          <button className="btn w-auto bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-2" type="submit" id="sendMessageButton"
                             style={{transition: "ease-out 0.3s"}}>Send Message</button>
                         </div>
                     </form>
