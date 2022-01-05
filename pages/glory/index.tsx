@@ -189,7 +189,7 @@ class Home extends React.Component<Props, ContactState> {
           <div id='contact' className="glory-contact" style={{backgroundColor:'#ff0000'}}>            
             <div className='md:flex items-center'>
               <div className='hidden md:block w-1/6'></div>
-              <div className='hidden md:block w-2/6 justify-center items-center p-8 h-[350px]'>
+              <div className='md:w-2/6 justify-center items-center p-8 h-[350px]'>
                 {/* <img src='assets/img/contact.png' className='w-full h-full p-8'/> */}
                 <iframe src='/mailbox' className='w-full h-full '/>
               </div>
