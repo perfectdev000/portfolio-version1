@@ -23,116 +23,6 @@ type ContactState = {
 }
 class Home extends React.Component<Props, ContactState> { 
 
-  // componentDidMount(){    
-  //   const scene = new THREE.Scene()
-  //   // scene.background = new THREE.Color( 0xff0000 );
-  //   const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000  )
-  //   const renderer = new THREE.WebGLRenderer({ alpha: true })
-  //   renderer.setClearColor( 0xffffff, 0 );
-  //   renderer.setSize(window.innerWidth, window.innerHeight)
-  //   document.body.appendChild(renderer.domElement)
-
-  //   var diamond = new THREE.Object3D();
-  //   let loader = new GLTFLoader();
-  //   loader.load('assets/3d-models/scene.gltf', function(gltf){
-  //     diamond=gltf.scene.children[0];              
-  //     scene.add(gltf.scene);    
-  //     diamond.scale.set(0.1, 0.1, 0.1);    
-  //     diamond.position.set(0, -10, -10)      
-  //   }, undefined, function ( error ) {
-  //     console.error( error );
-  //   });
-    
-  //   //========= light ==========
-  //   const ambient_light = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
-  //   ambient_light.position.set(0,0,100)
-  //   scene.add( ambient_light );
-
-  //   const directionalLight2 = new THREE.DirectionalLight( 0xffff00, 1);
-  //   directionalLight2.position.set(100,0,30)
-  //   scene.add( directionalLight2 );
-  //   const directionalLight3 = new THREE.DirectionalLight( 0xffff00, 1);
-  //   directionalLight3.position.set(-100,0,30)
-  //   scene.add( directionalLight3 );
-  //   const directionalLight4 = new THREE.DirectionalLight( 0xffff00, 1);
-  //   directionalLight4.position.set(0,0,100)
-  //   scene.add( directionalLight4 );
-
-  //   window.addEventListener('resize', onWindowResize, false)
-  //   function onWindowResize() {
-  //       camera.aspect = window.innerWidth / window.innerHeight
-  //       camera.updateProjectionMatrix()
-  //       renderer.setSize(window.innerWidth, window.innerHeight)
-  //       render()
-  //   }
-
-  //   function lerp(x: number, y: number, a: number): number {
-  //       return (1 - a) * x + a * y
-  //   }
-
-  //   // Used to fit the lerps to start and end at specific scrolling percentages
-  //   function scalePercent(start: number, end: number) {
-  //       return (scrollPercent - start) / (end - start)
-  //   }
-
-  //   const animationScripts: { start: number; end: number; func: () => void }[] = []
-
-
-  //   animationScripts.push({
-  //       start: 0,
-  //       end: 100,
-  //       func: () => {
-  //           camera.lookAt(diamond.position)
-  //           camera.position.set(0, 0, 40)
-  //           // diamond.position.z = lerp(-10, 0, scalePercent(0, 40))
-  //           diamond.rotation.z = lerp(0, Math.PI, scalePercent(0, 20))
-  //           // diamond.position.x = Math.sin(scalePercent(0, 10)+3.141592) * 100
-  //           //console.log(diamond.position.z)
-  //       },
-  //   })
-  //   function playScrollAnimations() {
-  //       animationScripts.forEach((a) => {
-  //           if (scrollPercent >= a.start && scrollPercent < a.end) {
-  //               a.func()
-  //           }
-  //       })
-  //   }
-
-  //   let scrollPercent = 0
-
-  //   document.body.onscroll = () => {
-  //       //calculate the current scroll progress as a percentage
-  //       scrollPercent =
-  //           ((document.documentElement.scrollTop || document.body.scrollTop) /
-  //               ((document.documentElement.scrollHeight ||
-  //                   document.body.scrollHeight) -
-  //                   document.documentElement.clientHeight)) *
-  //           100
-  //       ;
-  //       // (document.getElementById('scrollProgress') as HTMLDivElement).innerText =   'Scroll Progress : ' + scrollPercent.toFixed(2)
-  //   }
-
-  //   // const stats = Stats()
-  //   // document.body.appendChild(stats.dom)
-
-  //   function animate() {
-  //       requestAnimationFrame(animate)
-
-  //       playScrollAnimations()
-
-  //       render()
-
-  //       // stats.update()
-  //   }
-
-  //   function render() {
-  //       renderer.render(scene, camera)
-  //   }
-
-  //   window.scrollTo({ top: 0, behavior: 'smooth' })
-  //   animate()
-  // }
-
   form = React.createRef<HTMLFormElement>();
   
   constructor(props:Props) {
@@ -298,11 +188,13 @@ class Home extends React.Component<Props, ContactState> {
           {/* ----------contact-------  */}
           <div id='contact' className="glory-contact" style={{backgroundColor:'#ff0000'}}>            
             <div className='md:flex items-center'>
-              <div className='hidden md:block w-2/6 justify-center items-center p-8'>
-                <img src='assets/img/contact.png' className='w-full h-full p-8'/>   
+              <div className='hidden md:block w-1/6'></div>
+              <div className='hidden md:block w-2/6 justify-center items-center p-8 h-[350px]'>
+                {/* <img src='assets/img/contact.png' className='w-full h-full p-8'/> */}
+                <iframe src='/mailbox' className='w-full h-full '/>
               </div>
-              <div className='h-full w-full md:w-4/6 text-base font-medium text-white p-8 flex items-center justify-center'>
-                  <div className="contact-form w-full h-full md:mr-40">
+              <div className='h-full w-full md:w-2/6 text-base font-medium text-white p-8 flex items-center justify-center'>
+                  <div className="contact-form w-full h-full">
                     <div id="success"></div>
                     <form name="sentMessage w-full h-full" id="contactForm" ref={this.form} >
                         <div className="control-group">
@@ -324,6 +216,7 @@ class Home extends React.Component<Props, ContactState> {
                     </form>
                   </div>
               </div>
+              <div className='hidden md:block w-1/6'></div>
             </div>
           </div>
 
