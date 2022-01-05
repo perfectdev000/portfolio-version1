@@ -29,9 +29,9 @@ class Home extends React.Component<{},{}> {
         pointLight2.position.set( 60, -200, 150 );
 				scene.add( pointLight2 );
 
-        // const pointLight3 = new THREE.PointLight( 0xffffff, 0.8 );
-        // pointLight3.position.set( 100, 400, 500 );
-				// scene.add( pointLight3 );
+        const pointLight3 = new THREE.PointLight( 0xffffff, 0.9 );
+        pointLight3.position.set( 0, 0, 500 );
+				scene.add( pointLight3 );
 
 				scene.add( camera );
 
@@ -164,8 +164,8 @@ class Home extends React.Component<{},{}> {
   render(){
     return (
       <>
-        <div id="container">
-          <canvas id="webgl-canvas"></canvas>
+        <div id="container" style={{width:'100vw', height:'100vh', backgroundColor:'black',position:'relative'}}>
+          <canvas id="webgl-canvas" style={{width:'100%', height:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}></canvas>
         </div>
         <video id="video" loop muted={true} autoPlay={true} style={{display:"none"}}>
           <source src="assets/3d-models/ouput_s1.mov"/>
