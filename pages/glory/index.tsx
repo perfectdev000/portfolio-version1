@@ -41,7 +41,7 @@ class Home extends React.Component<Props, ContactState> {
   sendEmail = () => {
     console.log("submit");    
     console.log(this.state.yourname);
-    window.open("mailto:darkrut22@gmail.com?subject=" + this.state.subject + "&" + this.state.message + "\n" + this.state.yourname);
+    window.open("mailto:darkrut22@gmail.com?subject=" + this.state.subject + "&body=" + this.state.message + "\n" + this.state.yourname);
   };
 
   render(){
