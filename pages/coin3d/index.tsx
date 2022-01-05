@@ -168,7 +168,7 @@ class Home extends React.Component<{},{}> {
           <canvas id="webgl-canvas" style={{width:'100%', height:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}></canvas>
         </div>
         <video id="video" loop muted={true} autoPlay={true} style={{display:"none"}}>
-          <source src="assets/3d-models/ouput_s1.mov"/>
+          <source src="assets/3d-models/movie.mp4"/>
 		    </video>
       </>
     );
