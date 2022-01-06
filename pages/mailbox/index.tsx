@@ -27,7 +27,7 @@ class Home extends React.Component<{},{}> {
 
       renderer = new THREE.WebGLRenderer();
       renderer.setPixelRatio( window.devicePixelRatio );
-      renderer.setClearColor(0xff0000);
+      renderer.setClearColor(0x000000);
       renderer.setSize( window.innerWidth, window.innerHeight );
       
       const controls = new OrbitControls( camera, renderer.domElement );

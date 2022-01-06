@@ -7,7 +7,7 @@ const Footer = ({}) => {
     window.open("mailto:darkrut22@gmail.com?subject=About Project");
   };
   return (
-    <div className="Footer bg-red border-t border-dashed w-full h-16 flex items-center">
+    <div className="Footer bg-black border-t border-dashed w-full h-16 flex items-center">
       <div className='w-full flex justify-around items-center text-white w-full h-full'>
         <Link href={"#"}>
           <a className='h-full' onClick={()=>sendEmail()}><FaMailBulk className='w-full h-full p-4 hover:p-3'/></a>

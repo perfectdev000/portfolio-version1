@@ -64,7 +64,7 @@ class Home extends React.Component<Props, ContactState> {
                   <div>
                     <img src="assets/img/text.png"/>                  
                     <div className='md:w-full flex justify-center'>
-                      <button className="btn btn-here bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-3" type="submit" id="sendMessageButton"
+                      <button className="btn btn-here bg-white hover:bg-black border-2 border-white font-medium hover:text-white text-black px-6 py-3" type="submit" id="sendMessageButton"
                         style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
                     </div>
                   </div>
@@ -177,7 +177,8 @@ class Home extends React.Component<Props, ContactState> {
                 <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={"PHP/Laravel"} />
               </div>
             </div>
-            <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/>
+            {/* <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/> */}
+            <iframe src='/resume' className='absolute left-0 top-0 w-full h-full z-0'/>
           </div>
 
           {/* ----------skill-------  */}
@@ -187,7 +188,7 @@ class Home extends React.Component<Props, ContactState> {
           </div>
 
           {/* ----------contact-------  */}
-          <div id='contact' className="glory-contact" style={{backgroundColor:'#ff0000'}}>            
+          <div id='contact' className="glory-contact" style={{backgroundColor:'#000000'}}>            
             <div className='md:flex items-center'>
               <div className='hidden md:block w-1/6'></div>
               <div className='md:w-2/6 justify-center items-center p-8 h-[350px]'>
@@ -211,7 +212,7 @@ class Home extends React.Component<Props, ContactState> {
                           <p className="help-block"></p>
                         </div>
                         <div className='mt-8 w-full flex justify-center md:justify-start'>
-                          <button className="btn w-auto bg-white hover:bg-red border-2 border-white font-medium hover:text-white text-red px-6 py-2" type="button" id="sendMessageButton" onClick={()=>this.sendEmail()}
+                          <button className="btn w-auto bg-white hover:bg-black border-2 border-white font-medium hover:text-white text-black px-6 py-2" type="button" id="sendMessageButton" onClick={()=>this.sendEmail()}
                             style={{transition: "ease-out 0.3s"}} >Send Message</button>
                         </div>
                     </form>

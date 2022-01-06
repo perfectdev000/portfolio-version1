@@ -14,7 +14,7 @@ export default function SlideImgItem({imgURL, imgLink, skillContent}) {
                 <img src={imgURL} className="w-full h-full shadown-md "/>
               }              
             </div>
-            <div className="bg-white font-medium text-base text-red text-center p-2 h-16 flex justify-center items-center">
+            <div className="bg-white font-medium text-base text-gray-500 text-center p-2 h-16 flex justify-center items-center">
               <div className="">
                 {skillContent}
               </div>
