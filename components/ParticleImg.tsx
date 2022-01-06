@@ -7,10 +7,10 @@ import ParticleImage, {
   ParticleForce
 } from "react-particle-image";
 
-// const round = (n: number, step = 1) => Math.ceil(n / step) * step;
+const round = (n: number, step = 1) => Math.ceil(n / step) * step;
 
 // Try making me lower to see how performance degrades
-// const STEP = 1;
+const STEP = 1;
 
 const particleOptions: ParticleOptions = {
   filter: ({ x, y, image }) => {
@@ -22,9 +22,9 @@ const particleOptions: ParticleOptions = {
   },
   color: ({ x, y, image }) => {
     const pixel = image.get(x, y);
-    // return `rgba( ${round(pixel.r, STEP)}, ${round(pixel.g, STEP)}, ${round(pixel.b, STEP)}, ${round(pixel.a, 1) / 255})`;
-    let gray =  0.257 * pixel.r + 0.504 * pixel.g + 0.098 * pixel.b +  16;
-    return `rgb( ${gray}, ${gray}, ${gray})`;
+    return `rgba( ${round(pixel.r, STEP)}, ${round(pixel.g, STEP)}, ${round(pixel.b, STEP)}, ${round(pixel.a, 1) / 255})`;
+    // let gray =  0.257 * pixel.r + 0.504 * pixel.g + 0.098 * pixel.b +  16;
+    // return `rgb( ${gray}, ${gray}, ${gray})`;
   },
   radius: ({ x, y, image }) => {
     // const pixel = image.get(x, y);
