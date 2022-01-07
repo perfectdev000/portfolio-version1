@@ -55,10 +55,9 @@ class Home extends React.Component<Props, ContactState> {
         
         <main className="glory-main-wraper relative" data-spy="scroll" data-target=".navbar" data-offset="70">
           {/* ----------here-------  */}
-          <div id='here' className='w-full h-[100vh] relative'>
-            <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-[100vh]' style={{zIndex:'-1'}}/>
+          <div id='here' className='w-full h-auto relative'>            
             <Header />
-            <div className='flex justify-center items-end h-[100vh] absolute top-0 left-0 w-full'>
+            <div className='flex justify-center items-end h-auto w-full'>
               <div className='content'>
                 <div className='content-col'>
                   <div>
@@ -76,6 +75,7 @@ class Home extends React.Component<Props, ContactState> {
                 </div>
               </div>
             </div>
+            <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-full' style={{zIndex:'-1'}}/>
           </div>
 
           {/* ----------about-------  */}
@@ -163,11 +163,11 @@ class Home extends React.Component<Props, ContactState> {
                 My Excellent Portfolio
               </div>
               <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
-                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + Node.js + Chart.js + TailwindCSS + SCSS + GraphQL"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + TypeScript + Chart.js + TailwindCSS + SCSS + GraphQL"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={"Three.js + WebGL"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/alethea.png"} imgLink={"https://alethea.ai/"} skillContent={"React + Node.js + WebGL + Video.js + BlockChain + NFT"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={"Backbone.js + particle.js + GoogleAPI + Python + Django"} />
-                <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + Three.js + NFT token"} />
+                <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + TypeScript + Three.js + NFT token"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={"BootStrap4 + particle.js + PHP"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={"React + Next.js + Node.js"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={"React + Chart.js + BlockChain + UltraNote"} />

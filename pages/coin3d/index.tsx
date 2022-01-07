@@ -1,9 +1,8 @@
 import React from 'react';
 import * as THREE from "three";
 import { OBJLoader} from 'three/examples/jsm/loaders/OBJLoader'
-import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry';
-class Home extends React.Component<{},{}> { 
 
+class Home extends React.Component<{},{}> { 
   componentDidMount(){  
 			let camera:any, scene:any, renderer:any, raycaster:any, pointer:any;			
 			let windowHalfX = window.innerWidth / 2;
@@ -23,104 +22,117 @@ class Home extends React.Component<{},{}> {
 				scene.add( camera );
 
         // -------- add light ---------------
-				const ambientLight = new THREE.AmbientLight( 0xffffff, 0.2 );
-				scene.add( ambientLight );
+				const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.2 );
+        scene.add( ambientLight );
 
-				const pointLight1 = new THREE.PointLight( 0xffffff, 1 );
+        const pointLight1 = new THREE.PointLight( 0xffffff, 0.8 );
         pointLight1.position.set( -100, 400, 500 );
-				scene.add( pointLight1 );
+        scene.add( pointLight1 );
 
-        const pointLight2 = new THREE.PointLight( 0xffffff, 1 );
+        const pointLight2 = new THREE.PointLight( 0xffffff, 0.8 );
         pointLight2.position.set( 60, -200, 150 );
-				scene.add( pointLight2 );
-
-        const pointLight3 = new THREE.PointLight( 0xbbbbbb, 0.9 );
-        pointLight3.position.set( 0, 0, 400 );
-				scene.add( pointLight3 );
+        scene.add( pointLight2 );
         // -------- end light ---------------
         
+        scene.add( camera );
+
         raycaster = new THREE.Raycaster();
+
         pointer = new THREE.Vector2(-Infinity, -Infinity);
-        
-        object = new THREE.Object3D();
-        scene.add( object );
 
         helperMesh = new THREE.Mesh( new THREE.PlaneGeometry(140, 140),
-            new THREE.MeshBasicMaterial({transparent: true,opacity: 1.0,color: 0x0000ff})
+            new THREE.MeshBasicMaterial({
+                transparent: true,
+                opacity: 0.0,
+                color: 0x0000ff
+            })
         )
-        // scene.add( helperMesh );
+
+        scene.add( helperMesh );
+
+        object = new THREE.Object3D();
+
+        scene.add( object );
 
         video = document.getElementById( 'video' );
 				video.play();
 				video.addEventListener( 'play', function () {	} );
         videoTexture = new THREE.VideoTexture( video );  
-        
+        // window.videoTexture = videoTexture;
+
 				// manager
-				function loadModel() {				}
-				const manager = new THREE.LoadingManager( loadModel );
-				manager.onProgress = function ( item, loaded, total ) {console.log( item, loaded, total );};
+				const manager = new THREE.LoadingManager();
+        manager.onProgress = function ( item, loaded, total ) {
+            console.log( item, loaded, total );
+        };
+        // texture
 
-				// texture
-				const textureLoader = new THREE.TextureLoader( manager );
-				const texture1 = textureLoader.load( 'assets/3d-models/tex_uv_inv_blur2_contrast.png' );
-        const texture2 = textureLoader.load( 'assets/3d-models/tex_uv.png' );							
-				const texture11 = textureLoader.load( 'assets/3d-models/1.png' );
-        const texture22 = textureLoader.load( 'assets/3d-models/2.png' );
+        const textureLoader = new THREE.TextureLoader( manager );
+        const texture1 = textureLoader.load( 'assets/3d-models/coin3d/tex_uv_inv_blur2_contrast.png' );
+        const texture2 = textureLoader.load( 'assets/3d-models/coin3d/tex_uv.png' );
+        // model
 
-        // Add X Mesh
-        const xMesh = new THREE.Mesh( new THREE.PlaneGeometry(150, 150),
-            new THREE.MeshStandardMaterial({ transparent:true,  side: THREE.DoubleSide, color: 0x444444, map:texture11, bumpMap: texture22, alphaMap:texture22 ,bumpScale: 2, roughness: 0.3, metalness: 0.7,} )
-        )        
-        xMesh.position.y=7
-        xMesh.position.z=-3
-        xMesh.position.x=0
-        xMesh.rotation.x = 3.141592/2;
-        object.add(xMesh)
-
-				// model
-				function onProgress( xhr:any ) {
-					if ( xhr.lengthComputable ) {
-						const percentComplete = xhr.loaded / xhr.total * 100;
-						console.log( 'model ' + Math.round( percentComplete ) + '% downloaded' );
-					}
-				}
-				function onError() {}
-				// const loader = new THREE.OBJLoader( manager );
-        const loader = new OBJLoader();
-				loader.load( 'assets/3d-models/coin22.obj', function ( obj:any ) {
-					obj.traverse( function ( child:any ) {
-						if ( child.isMesh ) {
-                // child.geometry.computeVertexNormals();                
-                const mat = new THREE.MeshStandardMaterial( {  color: 0x444444, map: texture2, bumpMap: texture1, bumpScale: 2, roughness: 0.3, metalness: 0.7,} );
-                mesh = child;                            
-                mesh.material = mat;
-                mesh.position.y = 0;
-                mesh.scale.multiplyScalar( 40 );
-                object.add( mesh );
-                animate();
+        function onProgress( xhr:any ) {
+            if ( xhr.lengthComputable ) {
+                const percentComplete = xhr.loaded / xhr.total * 100;
+                console.log( 'model ' + Math.round( percentComplete ) + '% downloaded' );
             }
-					});
-				}, onProgress, onError );
+        }
 
-        loader.load( 'assets/3d-models/coin_vidlayer4.obj', function ( obj:any ) {
-          obj.traverse( function ( child:any ) {
-						if ( child.isMesh ) {
-                // child.geometry.computeVertexNormals();                            
-                const mat = new THREE.MeshStandardMaterial( { 
-                    color: 0x444444,                                
-                    map: videoTexture,                                
-                    roughness: 0.5,
-                    metalness: 0.3,
-                } );
-                mesh2 = child;                            
-                mesh2.material = mat;
-                mesh2.scale.multiplyScalar( 38 );
-                mesh2.position.y = 6;
-                // window.mesh2 = mesh2;
-                object.add( mesh2 );
-            }
-					});
-				}, onProgress, onError );
+        function onError(e:any) {
+            console.log( e );
+        }
+
+        const loader = new OBJLoader( manager );
+        loader.load( 'assets/3d-models/coin3d/coin24.obj', function ( obj ) {
+            obj.traverse( function ( child:any ) {
+                if ( child.isMesh ) {                    
+                    const mat = new THREE.MeshStandardMaterial( { 
+                        color: 0xffffff,
+                        map: texture2,
+                        //map: videoTexture,
+                        bumpMap: texture1,
+                        bumpScale: 2,
+                        roughness: 0.3,
+                        metalness: 0.7,
+                        // transparent: true,
+                        // opacity: 0.8,
+                        // side: THREE.DoubleSide
+                    } );
+                    mesh = child;                    
+                    mesh.material = mat;
+                    mesh.position.y = 0;
+                    mesh.scale.multiplyScalar( 40 );                    
+                    // window.mesh = mesh;
+                    object.add( mesh );
+                    animate();
+                }
+            } );
+        }, onProgress, onError );
+
+        loader.load( 'assets/3d-models/coin3d/coin_vidlayer7.obj', function ( obj ) {                        
+
+            obj.traverse( function ( child:any ) {
+
+                if ( child.isMesh ) {
+                    // child.geometry.computeVertexNormals();                    
+                    const mat = new THREE.MeshStandardMaterial( { 
+                        color: 0xffffff,
+                        map: videoTexture,
+                        roughness: 0.5,
+                        metalness: 0.3,
+                    } );
+
+                    mesh2 = child;                    
+                    mesh2.material = mat;
+                    mesh2.position.y = 0;
+                    mesh2.scale.multiplyScalar( 38.5 );
+                    mesh2.position.y = 3.35;
+                    // window.mesh2 = mesh2;
+                    object.add( mesh2 );
+                }
+            } );
+        }, onProgress, onError );
 
 				//creating renderer
         const webglCanvas = document.getElementById("webgl-canvas");
@@ -156,7 +168,7 @@ class Home extends React.Component<{},{}> {
 			}
 
 			function render() {
-        object.rotation.z -= 0.02;
+        object.rotation.z -= 0.01;
         raycaster.setFromCamera( pointer, camera );
 				const intersects = raycaster.intersectObject( helperMesh );
 
@@ -176,11 +188,11 @@ class Home extends React.Component<{},{}> {
   render(){
     return (
       <>
-        <div id="container" style={{width:'100vw', height:'100vh', backgroundColor:'black',position:'relative'}}>
+        <div id="container" style={{width:'100vw', height:'100vh', backgroundColor:'#444444',position:'relative'}}>
           <canvas id="webgl-canvas" style={{width:'100%', height:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}></canvas>
         </div>
         <video id="video" loop muted={true} autoPlay={true} style={{display:"none"}}>
-          <source src="assets/3d-models/movie.mp4"/>
+          <source src="assets/3d-models/coin3d/movie.mp4"/>
 		    </video>
       </>
     );

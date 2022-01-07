@@ -44,7 +44,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/coin3d/coin.js"  ],
   "exclude": [
     "node_modules"
   ]

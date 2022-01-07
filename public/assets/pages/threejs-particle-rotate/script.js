@@ -114,7 +114,7 @@
         function render() {            
 
             if (controls.rotate) {
-                knot.rotation.y = step += 0.01;
+                knot.rotation.y = step += 0.005;
             }
             // render using requestAnimationFrame
             requestAnimationFrame(render);
