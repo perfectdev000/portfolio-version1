@@ -1,8 +1,11 @@
-#__next{
+
+body{
   display: flex;
   justify-content: center;
+  background-color: lightgray;
 }
 .glory-main-wraper{
+  background-color: white;
   max-width: 1600px;
   position: relative;
   .tsparticle{
@@ -60,39 +63,6 @@
     margin-top: 20px;
     padding: 4px 8px;
   }
-  #here{
-    max-height: 100vh;
-    .content{
-      min-height: calc(100vh - 70px);
-      max-height: calc(100vh - 70px);
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      .content-col{
-        width: 50vw;
-        height: 100%;        
-        min-height: calc(100vh - 70px);
-        max-height: calc(100vh - 70px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .right-img{
-          min-height: calc(100vh - 70px);
-          max-height: calc(100vh - 200px);          
-          display: flex;
-          justify-content: center;
-          align-items: flex-end;
-          width: 100%;
-          padding: 20px 20px 0 20px;
-          img{
-            max-height: 600px;
-            max-width: 600px;
-          }
-        }
-      }
-    }
-  }
   .back-to-top {
     background-color: red;
     border:solid 2px white;
@@ -123,39 +93,5 @@ canvas {
   z-index: 20;
 }
 @media only all and (max-width: 768px) {  
-  .glory-main-wraper{
-    #here{
-      max-height: 100vh;
-      .content{
-        min-height: calc(100vh - 70px);
-        max-height: calc(100vh - 70px);
-        width: 100vw;
-        display: inline;
-        justify-content: center;
-        position: relative;
-        .content-col{
-          width: 100vw;          
-          min-height: calc(100vh / 2 - 35px);
-          max-height: calc(100vh /2 - 35px);          
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          .right-img{
-            min-height: calc(100vh / 2 - 35px);
-            max-height: calc(100vh /2 - 35px);            
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            width: 100%;
-            padding: 20px 20px 0 20px;
-            img{
-              min-height: calc(100vh / 2 - 70px);
-              max-height: calc(100vh /2 - 70px); 
-            }
-          }
-        }
-      }
-    }
-  }
+  
 }
