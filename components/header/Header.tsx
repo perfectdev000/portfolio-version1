@@ -14,7 +14,7 @@ const Header = () => {
       window.addEventListener('scroll', handleScroll)
   })
 
-  const navbarClasses = (scrolled)?'navbar-header sticky':'navbar-header';
+  const navbarClasses = (scrolled)?'navbar-header sticky relative':'navbar-header relative';
   return (
     <div className={navbarClasses}>
       <div className="navbar-nav w-full h-full flex justify-around items-center text-white ">

@@ -4,7 +4,7 @@
 
         // create a render and set the size
         var webGLRenderer = new THREE.WebGLRenderer({ alpha: true });
-        webGLRenderer.setClearColor(new THREE.Color(0xff0000, 1.0));
+        webGLRenderer.setClearColor(new THREE.Color(0x000000, 1.0));
         webGLRenderer.setSize(window.innerWidth, window.innerHeight);
         webGLRenderer.shadowMapEnabled = true;
 
@@ -114,7 +114,7 @@
         function render() {            
 
             if (controls.rotate) {
-                knot.rotation.y = step += 0.01;
+                knot.rotation.y = step += 0.005;
             }
             // render using requestAnimationFrame
             requestAnimationFrame(render);

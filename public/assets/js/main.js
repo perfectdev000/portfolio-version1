@@ -16,7 +16,7 @@
 
     
     $('.btn-here').click(function () {
-        $('html, body, main').animate({scrollTop: 4000}, 1500, 'easeInOutExpo');
+        $('html, body, main').animate({scrollTop: 10000}, 1500, 'easeInOutExpo');
         return false;
     });
     
