@@ -188,7 +188,7 @@ class Home extends React.Component<{},{}> {
   render(){
     return (
       <>
-        <div id="container" style={{width:'100vw', height:'100vh', backgroundColor:'#444444',position:'relative'}}>
+        <div id="container" style={{width:'100vw', height:'100vh', backgroundColor:'#202020',position:'relative'}}>
           <canvas id="webgl-canvas" style={{width:'100%', height:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}></canvas>
         </div>
         <video id="video" loop muted={true} autoPlay={true} style={{display:"none"}}>

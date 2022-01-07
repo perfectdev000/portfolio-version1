@@ -55,27 +55,24 @@ class Home extends React.Component<Props, ContactState> {
         
         <main className="glory-main-wraper relative" data-spy="scroll" data-target=".navbar" data-offset="70">
           {/* ----------here-------  */}
-          <div id='here' className='w-full h-auto relative'>            
+          <div id='here' className='w-full h-[100vh] md:h-[700px] relative'>            
             <Header />
-            <div className='flex justify-center items-end h-auto w-full'>
-              <div className='content'>
-                <div className='content-col'>
-                  <div>
-                    <img src="assets/img/text.png"/>                  
+            <div className='grid grid-cols-1 md:grid-cols-2 h-[100vh] md:h-[700px] pt-[70px] relative z-10'>              
+                <div className='flex justify-center items-center p-8 relative'>
+                  <div className='relative'>
+                    <img src="assets/img/text.png" className='h-[25vh] md:h-auto'/>
                     <div className='md:w-full flex justify-center'>
                       <button className="btn btn-here bg-white hover:bg-black border-2 border-white font-medium hover:text-white text-black px-6 py-3" type="submit" id="sendMessageButton"
                         style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
                     </div>
                   </div>
-                </div>                
-                <div className='content-col'>
-                  <div className='right-img'>
-                    <img src="assets/img/man1.png" className=''/>
-                  </div>
                 </div>
-              </div>
+                <div className='flex justify-center items-start md:items-center relative p-8'>
+                  <img src="assets/img/man1.png" className='w-[50%] h-auto'/>                  
+                </div>
             </div>
-            <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-full' style={{zIndex:'-1'}}/>
+            
+            <iframe src="/assets/pages/threejs-particle-rotate/index.html" className='absolute top-0 left-0 w-full h-full' />
           </div>
 
           {/* ----------about-------  */}
