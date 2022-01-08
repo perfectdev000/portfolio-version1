@@ -62,13 +62,13 @@ export default function SkillsView() {
             <img src="assets/img/skills/redux.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/next.jpg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/vue.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/MaterialUI.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
+            <img src="assets/img/skills/material-ui.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/antd.webp" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/tailwind.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/webgl.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/three.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/babylon.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/d3.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
+            <img src="assets/img/skills/d3js.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/chartjs.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
 
             {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}

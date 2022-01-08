@@ -12,14 +12,19 @@ export default function SlideImgItem({imgURL, imgLink, skillContent}) {
                 <iframe src={imgLink} className="w-full h-full shadown-md "/>
                 :
                 <img src={imgURL} className="w-full h-full shadown-md "/>
-              }              
+              }
             </div>
             <div className="bg-white font-medium text-base text-gray-500 text-center p-2 h-16 flex justify-center items-center">
               <div className="">
                 {skillContent}
               </div>
             </div>
-            <div className="absolute bg-white left-0 top-0 w-full h-full opacity-0 hover:opacity-50 z-10" style={{transition: "ease-out 0.5s"}}/>
+              {
+                (imgURL==='my-portfolio')?
+                <></>
+                :
+                <div className="absolute bg-white left-0 top-0 w-full h-full opacity-0 hover:opacity-50 z-10" style={{transition: "ease-out 0.5s"}}/>
+              }            
           </div>
         </a>
       </Link>
