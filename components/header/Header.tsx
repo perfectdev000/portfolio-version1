@@ -39,18 +39,7 @@ const Header = () => {
             </div>
           </a>
         </Link>
-        
-        <Link href="#resume">
-          <a className="nav-item nav-link">
-            <div className="flex justify-center items-center hover:cursor-pointer">
-              <div className="md:mr-4">            
-                <FaFileInvoice className='w-8 h-8'/>
-              </div>
-              <div className="hidden md:block text-xl">Resume</div>
-            </div>
-          </a>
-        </Link>
-        
+                
         <Link href="#portfolio">
           <a className="nav-item nav-link">
           <div className="flex justify-center items-center hover:cursor-pointer">
