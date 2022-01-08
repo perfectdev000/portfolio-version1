@@ -1,0 +1,11 @@
+Model Information:
+* title:	Email_Icon
+* source:	https://sketchfab.com/3d-models/email-icon-43e4588d176945e889004cf270e17cfa
+* author:	Simon.Keating (https://sketchfab.com/Simon.Keating)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Email_Icon" (https://sketchfab.com/3d-models/email-icon-43e4588d176945e889004cf270e17cfa) by Simon.Keating (https://sketchfab.com/Simon.Keating) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

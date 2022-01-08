@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mail Icon
+* source:	https://sketchfab.com/3d-models/mail-icon-b9133b28050d43aeb973aa0f08f86441
+* author:	AnshiNoWara (https://sketchfab.com/AnshiNoWara)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mail Icon" (https://sketchfab.com/3d-models/mail-icon-b9133b28050d43aeb973aa0f08f86441) by AnshiNoWara (https://sketchfab.com/AnshiNoWara) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

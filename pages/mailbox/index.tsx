@@ -15,7 +15,6 @@ class Home extends React.Component<{},{}> {
       container = document.getElementById( 'container' );
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 2000 );      
-      camera.position.set( 0, 5, 5 );
       
 
       const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
@@ -31,7 +30,7 @@ class Home extends React.Component<{},{}> {
       renderer.setSize( window.innerWidth, window.innerHeight );
       
       const controls = new OrbitControls( camera, renderer.domElement );
-			controls.target.set( 0, 1, -1 );
+			
 			controls.update();
 			controls.enablePan = false;
 			controls.enableDamping = true;
@@ -40,10 +39,14 @@ class Home extends React.Component<{},{}> {
       
       clock = new THREE.Clock();      
       const loader = new GLTFLoader();
-      loader.load( 'assets/3d-models/mailbox/scene.gltf', function ( gltf ) {
+      loader.load( 'assets/3d-models/mail_icon/scene.gltf', function ( gltf ) {
         model = gltf.scene.children[0];
         scene.add( gltf.scene );
-        model.scale.set(0.03, 0.03, 0.03)
+        model.scale.set(0.3, 0.3, 0.3)
+        model.position.set(0,0,0)
+        camera.position.set(0,1,2)
+        camera.lookAt(model.position.x,model.position.y,model.position.z)
+        controls.target.set(model.position.x,model.position.y,model.position.z)
 
       }, undefined, function ( error ) {
         console.error( error );

@@ -11,6 +11,7 @@ import ParticleImg from 'components/ParticleImg';
 import SlideImgItem from 'components/SlideImgItem';
 import SkillViewChart from 'components/SkillViewChart';
 import SkillsView from 'components/SkillsView';
+import Link from 'next/link';
 
 type Props = {  
 }
@@ -80,7 +81,7 @@ class Home extends React.Component<Props, ContactState> {
             <div style={{maxWidth:'1200px'}}>
               <div className='text-xl md:text-40 text-center text-gray-700 font-bold md:mt-8 mb-8'>ABOUT ME</div>
               <div className='md:flex md:items-center md:mb-8 ' >
-                <div className='text-base md:text-lg font-normal text-gray-500 md:px-8'>
+                <div className='text-base md:text-lg font-normal text-gray-500 md:px-8 mb-4'>
                   I&apos;m Andrey from Russia and have 10+ years of hands-on experience in Web, Mobile and Desktop App.<br/>
                   I got my Bachelor of Computer Science in 2011 and I&apos;ve been working as a professional software developer since 2012. During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill fields.<br/>
                   Implemented Web & Mobile Development from concept through deployment and worked on lots of small and large scale projects.<br/>
@@ -89,7 +90,13 @@ class Home extends React.Component<Props, ContactState> {
                   <br/>
                   ✅ Education | <span className='text-red'>Bachelor of Computer Science</span> | Kuban State Technological University | 2011<br/>
                   ✅ Experience | Frontend Developer | <span className='text-red'>ASPIRITY</span> | From 2013 to 2017<br/>
-                  ✅ Experience | Full Stack Developer | <span className='text-red'>Artezio</span> | From 2017 to 2020<br/>                  
+                  ✅ Experience | Full Stack Developer | <span className='text-red'>Artezio</span> | From 2017 to 2020<br/>
+                  <br/>
+                  <Link href={"https://cvdesignr.com/p/618960fde7a23"}>
+                    <a target={"_blank"} className='text-base text-blue-800 underline hover:text-blue-900'>
+                      My Resume
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
