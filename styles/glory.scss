@@ -64,7 +64,7 @@ body{
     padding: 4px 8px;
   }
   .back-to-top {
-    background-color: red;
+    background-color: black;
     border:solid 2px white;
     color: #ffffff;
     position: fixed;
@@ -80,8 +80,8 @@ body{
   }
   .back-to-top:hover {
     background-color: white;
-    border:solid 2px red;
-    color: red;    
+    border:solid 2px black;
+    color: black;
   }
 
 }
