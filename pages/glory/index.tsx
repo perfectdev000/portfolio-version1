@@ -81,8 +81,8 @@ class Home extends React.Component<Props, ContactState> {
               <div className='text-xl md:text-40 text-center text-gray-700 font-bold md:mt-8 mb-8'>ABOUT ME</div>
               <div className='md:flex md:items-center md:mb-8 ' >
                 <div className='text-base md:text-lg font-normal text-gray-500 md:px-8'>
-                  I'm Andrey from Russia and have 10+ years of hands-on experience in Web, Mobile and Desktop App.<br/>
-                  I got my Bachelor of Computer Science in 2011 and I've been working as a professional software developer since 2012. During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill fields.<br/>
+                  I&apos;m Andrey from Russia and have 10+ years of hands-on experience in Web, Mobile and Desktop App.<br/>
+                  I got my Bachelor of Computer Science in 2011 and I&apos;ve been working as a professional software developer since 2012. During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill fields.<br/>
                   Implemented Web & Mobile Development from concept through deployment and worked on lots of small and large scale projects.<br/>
                   I am honest and hardworking and always like new technology and challenge.<br/>
                   I prefer to build trust and a long-term relationships.<br/>
