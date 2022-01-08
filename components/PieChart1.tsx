@@ -24,7 +24,9 @@ export default class PieChart1 extends React.Component<PieChartProps, PieChartSt
   };
   render() {
     return (
+      
       <Chart options={chartdata} type="pie" width="100%" series={chartdata.series} />
+       
     );
   }
 }

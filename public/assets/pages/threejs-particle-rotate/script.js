@@ -4,7 +4,7 @@
 
         // create a render and set the size
         var webGLRenderer = new THREE.WebGLRenderer({ alpha: true });
-        webGLRenderer.setClearColor(new THREE.Color(0x000000, 1.0));
+        webGLRenderer.setClearColor(new THREE.Color(0x101010, 1.0));
         webGLRenderer.setSize(window.innerWidth, window.innerHeight);
         webGLRenderer.shadowMapEnabled = true;
 
@@ -66,14 +66,14 @@
         function generateSprite() {
 
             var canvas = document.createElement('canvas');
-            canvas.width = 16;
-            canvas.height = 16;
+            canvas.width = 12;
+            canvas.height = 12;
 
             var context = canvas.getContext('2d');
             var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
             gradient.addColorStop(0, 'rgba(255,255,255,1)');
-            gradient.addColorStop(0.2, 'rgba(0,255,255,1)');
-            gradient.addColorStop(0.4, 'rgba(0,0,64,1)');
+            gradient.addColorStop(0.2, 'rgba(0,190,190,1)');
+            gradient.addColorStop(0.4, 'rgba(0,0,70,1)');
             gradient.addColorStop(1, 'rgba(0,0,0,1)');
 
             context.fillStyle = gradient;

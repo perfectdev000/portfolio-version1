@@ -76,87 +76,29 @@ class Home extends React.Component<Props, ContactState> {
           </div>
 
           {/* ----------about-------  */}
-          <div id='about' className="glory-about-me bg-white ">            
-            <div className='md:flex md:items-center'>
-              <div className='about-me-particle-image w-full md:w-2/6 p-8  flex justify-center items-center'>                
-                <ParticleImg/>                
-              </div>
-              <div className='about-me-description w-full md:w-4/6 h-full p-8 flex items-center justify-center'>
-                <div>
-                  <div className='text-xl md:text-40 text-center text-gray-700 font-bold mb-8'>Creative, Passionate and Efficient Developer</div>
-                  <div className='text-base md:text-lg font-normal text-gray-500 '>
-                    Creative, Passionate and Efficient Sofrware developer with over 10 years of experience in web, mobile and desktop applications design, development and maintenance. Possesses diverse experience of creating multiple highly scalable applications using different tech stacks. Have worked in all phases of the project life cycle, using a wide variety of tools and frameworks. Implemented 3D Web, Virtual Reality with Three.js and WebGL.<br/>
-                    Leaded successful transition from LAMP Stack to MEAN Stack to reduce development time and improve system performance.<br/>
-                    Have strong and advanced algorithim logic.<br/>
-                    And have hands-on experience in web hosting & maintenance, Browser Automation and testing, Web Scraping & Crawling.<br/> 
-                    I prefer to build trust and a long-term relationships.
-                  </div>
+          <div id='about' className="glory-about-me bg-white p-8 flex justify-center" >
+            <div style={{maxWidth:'1200px'}}>
+              <div className='text-xl md:text-40 text-center text-gray-700 font-bold md:mt-8 mb-8'>ABOUT ME</div>
+              <div className='md:flex md:items-center md:mb-8 ' >
+                <div className='text-base md:text-lg font-normal text-gray-500 md:px-8'>
+                  I'm Andrey from Russia and have 10+ years of hands-on experience in Web, Mobile and Desktop App.<br/>
+                  I got my Bachelor of Computer Science in 2011 and I've been working as a professional software developer since 2012. During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill fields.<br/>
+                  Implemented Web & Mobile Development from concept through deployment and worked on lots of small and large scale projects.<br/>
+                  I am honest and hardworking and always like new technology and challenge.<br/>
+                  I prefer to build trust and a long-term relationships.<br/>
+                  <br/>
+                  ✅ Education | <span className='text-red'>Bachelor of Computer Science</span> | Kuban State Technological University | 2011<br/>
+                  ✅ Experience | Frontend Developer | <span className='text-red'>ASPIRITY</span> | From 2013 to 2017<br/>
+                  ✅ Experience | Full Stack Developer | <span className='text-red'>Artezio</span> | From 2017 to 2020<br/>                  
                 </div>
               </div>
             </div>
           </div>
-
-          {/* ----------resume-------  */}
-          <div id='resume' className="glory-resume w-full relative">
-            <div className='w-full h-full flex items-center justify-center text-gray-500' > 
-              <div>
-                <div className='grid grid-cols-1 md:grid-cols-3 w-full h-full md:h-auto '>
-                  <div className='resume-description h-full flex items-center justify-center'>
-                    <div className='pt-8 md:pb-8 pl-8 pr-8 md:pr-0'>
-                      <div className='text-lg font-semibold mb-3'>Education</div>
-                      <div className='text-lg font-semibold mb-3 text-gray-700'>
-                        <b className='text-red'>Bachelor of Computer Science</b><br/>Kuban State Technological University
-                      </div>
-                      <div className='text-base font-normal'>
-                        Kuban State Technological University, also referred to as the Kuban
-                        State University of Technology, is a Russian public technical university
-                        located in Krasnodar, one of the first higher educational institutions
-                        established in the southern region of Russia.<br/>
-                        <b>Relevant Coursework</b> : Operating Systems Architecture, Linux/Unix
-                        Programming, Usability in Website and Software Design, C++
-                        Programming, Web Page Development, Relational Database Design &
-                        SQL, Data Engineering, Advanced Software Programming
-                      </div>
-                    </div>
-                  </div>       
-                  <div className='resume-description h-full flex items-center md:items-start justify-center'>
-                    <div className='pt-8 md:pb-8 pl-8 pr-8 md:pr-0'>
-                      <div className='text-lg font-semibold text-gray-700 mb-3'>
-                        Experience | Frontend Developer <br/><b className='text-red'>ASPIRITY</b> From 2014 to 2017
-                      </div>
-                      <div className='text-base font-normal'>
-                        <ul>
-                          <li>✔ Implemented responsive web pages and mobile UI from concept through deployment</li>
-                          <li>✔ Implemented efficient and reusable front-end modules that drive complex web applications</li>
-                          <li>✔ Implemented 3D Scene, 3D Animation, Augmented reality(AR) and Virtual Reality(VR) with Three.js and Babylon.js</li>
-                          <li>✔ Implemented new responsive, mobile-first approach which increased mobile traffic by 10%.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>      
-                  <div className='resume-description h-full flex items-center md:items-start justify-center'>
-                    <div className='p-8'>
-                      <div className='text-lg font-semibold text-gray-700 mb-3'>
-                        Experience | Full Stack Developer <br/><b className='text-red'>Artezio</b> From 2017 to 2020
-                      </div>
-                      <div className='text-base font-normal'>
-                        <ul>
-                          <li>✔ Improved the performance of whole system with efficiency memory usage, multithreading, distributed computing, and other various ideas.</li>
-                          <li>✔ Developed app integration with RESTful and other APIs for Google Maps, social media logins, payment processors, blockchain wallet, and other services.</li>
-                          <li>✔ Implemented various bots, browser automation, and automation scripts.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>   
-                </div>
-              </div>    
-            </div>
-          </div>
-
+          
           {/* ----------portfolio-------  */}
           <div id='portfolio' className="glory-portfolio bg-transparent flex justify-center items-center p-8 relative">
             <div className='w-full h-full z-10'>              
-              <div className='title w-full text-center font-bold text-32 md:text-45 text-white mb-8'>
+              <div className='title w-full text-center font-bold text-32 md:text-45 text-white mb-8 md:mt-8'>
                 My Excellent Portfolio
               </div>
               <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
@@ -180,6 +122,7 @@ class Home extends React.Component<Props, ContactState> {
 
           {/* ----------skill-------  */}
           <div id='skill' className="glory-skill p-8">
+            <div className='title w-full text-center font-bold text-32 md:text-45 text-gray-700 pb-8 md:mt-8'>Skill Service</div>
             <SkillViewChart/>
             <SkillsView/>
           </div>
