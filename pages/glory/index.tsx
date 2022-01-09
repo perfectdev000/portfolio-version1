@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
 
-import { FaAngleUp, } from 'react-icons/fa';
+import { FaAngleUp, FaFileInvoice } from 'react-icons/fa';
 
 import Header from "components/header/Header"
 import Footer from 'components/footer/Footer';
@@ -93,8 +93,8 @@ class Home extends React.Component<Props, ContactState> {
                   ✅ Experience | Full Stack Developer | <span className='text-red'>Artezio</span> | From 2017 to 2020<br/>
                   <br/>
                   <Link href={"https://cvdesignr.com/p/618960fde7a23"}>
-                    <a target={"_blank"} className='text-base text-blue-800 underline hover:text-blue-900'>
-                      My Resume
+                    <a target={"_blank"} className='text-base text-blue-800 underline hover:text-blue-900 flex justify-start items-center pl-8'>
+                      <FaFileInvoice/><div className=''>&nbsp;My Resume</div>
                     </a>
                   </Link>
                 </div>
@@ -109,11 +109,11 @@ class Home extends React.Component<Props, ContactState> {
                 My Excellent Portfolio
               </div>
               <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
-                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + TypeScript + Chart.js + TailwindCSS + SCSS + GraphQL"} />
+                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + TypeScript + Node.js + TailwindCSS + SCSS + GraphQL"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={"Three.js + WebGL"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/alethea.png"} imgLink={"https://alethea.ai/"} skillContent={"React + Node.js + WebGL + Video.js + BlockChain + NFT"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={"Backbone.js + particle.js + GoogleAPI + Python + Django"} />
-                <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + TypeScript + Three.js + NFT token"} />
+                <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + Node.js + TypeScript + Three.js + NFT token"} />
                 <SlideImgItem imgURL={"my-portfolio"} imgLink={"https://perfectdev000.github.io/Particle-Image/"} skillContent={"Node.js + WebGL + Three.js"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={"BootStrap4 + particle.js + PHP"} />
                 <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={"React + Next.js + Node.js"} />
