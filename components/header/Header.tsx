@@ -1,5 +1,5 @@
 
-import { FaHome, FaPortrait, FaFileInvoice, FaCamera, FaServicestack, FaMailBulk } from 'react-icons/fa';
+import { FaHome, FaPortrait, FaCamera, FaServicestack, FaMailBulk } from 'react-icons/fa';
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 
