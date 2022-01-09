@@ -4,7 +4,7 @@
 
         // create a render and set the size
         var webGLRenderer = new THREE.WebGLRenderer({ alpha: true });
-        webGLRenderer.setClearColor(new THREE.Color(0x101010, 1.0));
+        webGLRenderer.setClearColor(new THREE.Color(0x050505, 1.0));
         webGLRenderer.setSize(window.innerWidth, window.innerHeight);
         webGLRenderer.shadowMapEnabled = true;
 
@@ -100,25 +100,20 @@
         }
 
         function createMesh(geom) {
-
             // assign two materials
             var meshMaterial = new THREE.MeshNormalMaterial({});
             meshMaterial.side = THREE.DoubleSide;
-
             // create a multimaterial
             var mesh = THREE.SceneUtils.createMultiMaterialObject(geom, [meshMaterial]);
-
             return mesh;
         }
 
-        function render() {            
-
+        function render() {
             if (controls.rotate) {
-                knot.rotation.y = step += 0.005;
+                knot.rotation.y = step += 0.001;
             }
             // render using requestAnimationFrame
             requestAnimationFrame(render);
             webGLRenderer.render(scene, camera);
         }
-
     });
