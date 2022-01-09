@@ -77,11 +77,11 @@ class Home extends React.Component<Props, ContactState> {
           </div>
 
           {/* ----------about-------  */}
-          <div id='about' className="glory-about-me bg-white p-8 flex justify-center" >
+          <div id='about' className="glory-about-me p-8 flex justify-center" style={{backgroundColor:'#D9EEE1'}} >
             <div style={{maxWidth:'1200px'}}>
               <div className='text-xl md:text-40 text-center text-gray-700 font-bold md:mt-8 mb-8'>ABOUT ME</div>
               <div className='md:flex md:items-center md:mb-8 ' >
-                <div className='text-base md:text-lg font-normal text-gray-500 md:px-8 mb-4'>
+                <div className='text-base md:text-lg font-medium text-gray-500 md:px-8 mb-4'>
                   I&apos;m Andrey from Russia and have 10+ years of hands-on experience in Web, Mobile and Desktop App.<br/>
                   I got my Bachelor of Computer Science in 2011 and I&apos;ve been working as a professional software developer since 2012. During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill fields.<br/>
                   Implemented Web & Mobile Development from concept through deployment and worked on lots of small and large scale projects.<br/>
@@ -93,8 +93,8 @@ class Home extends React.Component<Props, ContactState> {
                   ✅ Experience | Full Stack Developer | <span className='text-red'>Artezio</span> | From 2017 to 2020<br/>
                   <br/>
                   <Link href={"https://cvdesignr.com/p/618960fde7a23"}>
-                    <a target={"_blank"} className='text-base text-blue-800 underline hover:text-blue-900 flex justify-start items-center pl-8'>
-                      <FaFileInvoice/><div className=''>&nbsp;My Resume</div>
+                    <a target={"_blank"} className='text-base font-medium text-blue-800 underline hover:text-blue-900 flex justify-start items-center pl-8'>
+                      <FaFileInvoice/><div className=' font-semibold'>&nbsp;My Resume</div>
                     </a>
                   </Link>
                 </div>
@@ -129,7 +129,7 @@ class Home extends React.Component<Props, ContactState> {
           </div>
 
           {/* ----------skill-------  */}
-          <div id='skill' className="glory-skill p-8">
+          <div id='skill' className="glory-skill p-8" style={{backgroundColor:'#D9EEE1'}}>
             <div className='title w-full text-center font-bold text-32 md:text-45 text-gray-700 pb-8 md:mt-8'>Skill Service</div>
             <SkillViewChart/>
             <SkillsView/>
