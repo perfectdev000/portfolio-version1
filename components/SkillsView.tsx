@@ -5,9 +5,9 @@ export default function SkillsView() {
       <div className="text-gray-700 text-32 text-center font-medium p-8">MY SERVICE</div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">        
           <div className="md:px-8">
-            <div className="text-base font-medium text-gray-500 dark:text-white mb-1">Mobile Responsive Web Design</div>
+            <div className="text-base font-medium text-gray-500 dark:text-white mb-1">Pixel Perfect/Responsive Design</div>
             <div className="w-full bg-gray-300 rounded-full dark:bg-gray-700">
-              <div className="bg-green-600 text-sm font-medium text-blue-100 text-center p-1 leading-none rounded-full" style={{width: "95%"}}>95%</div>
+              <div className="bg-green-600 text-sm font-medium text-blue-100 text-center p-1 leading-none rounded-full" style={{width: "100%"}}>100%</div>
             </div>
           </div>
           <div className="md:px-8">
