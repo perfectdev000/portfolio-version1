@@ -96,6 +96,7 @@ export default function SkillsView() {
             {/* <img src="assets/img/skills/git.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>             */}
             <img src="assets/img/skills/github.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/gitlab.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
+            <img src="assets/img/skills/bitbucket.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             <img src="assets/img/skills/docker.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
             
             {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
