@@ -41,94 +41,85 @@ export default function SkillsView() {
             </div>
           </div>        
       </div>
-      <div className="text-gray-700 text-32 text-center font-medium p-8">MY SKILLS</div>
-      <div className="flex justify-center">
-          <div className="flex flex-wrap justify-center">
-            <img src="assets/img/skills/python.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            {/* <img src="assets/img/skills/csharp.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/> */}
-            <img src="assets/img/skills/php.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/html.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/css3.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/js.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/ts.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/sass.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
+      
+      <div className="relative flex justify-center items-center mt-16 mb-8">
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+        <div className="text-gray-700 text-xl md:text-28 text-center font-medium md:w-64">Frontend</div>
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+      </div>
+      <div className="flex flex-wrap justify-center">                     
+        <img src="assets/img/skills/html.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/css3.svg" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/js.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/ts.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/sass.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/jquery.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/bootstrap.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/react.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/reactNative.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/redux.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/next.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/vue.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>        
+        <img src="assets/img/skills/webgl.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/three.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/d3js.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/chartjs.svg" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/tailwind.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/material-ui.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+        <img src="assets/img/skills/antd.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+      </div>
 
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
+      <div className="relative flex justify-center items-center mt-16 mb-8">
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+        <div className="text-gray-700 text-xl md:text-28 text-center font-medium md:w-64">Backend</div>
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+      </div>
+      <div className="flex flex-wrap justify-center">
+          <img src="assets/img/skills/node.jpg" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/express.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/python.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/django.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/flask.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+      </div>
 
-            <img src="assets/img/skills/jquery.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/bootstrap.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/react.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/reactNative.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/redux.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/next.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/vue.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/material-ui.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/antd.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/tailwind.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/webgl.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/three.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            {/* <img src="assets/img/skills/babylon.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/> */}
-            <img src="assets/img/skills/d3js.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/chartjs.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
+      <div className="relative flex justify-center items-center mt-16 mb-8">
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+        <div className="text-gray-700 text-xl md:text-28 text-center font-medium md:w-64">DataBases</div>
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+      </div>
+      <div className="flex flex-wrap justify-center">            
+          <img src="assets/img/skills/mongodb.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/mysql.webp" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/sqlite.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/postgresql.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/cloudmongo.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/firebase.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+      </div>
 
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            <img src="assets/img/skills/node.jpg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/express.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>            
-            <img src="assets/img/skills/django.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/flask.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/laravel.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            <img src="assets/img/skills/graphql.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/webRTC.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            {/* <img src="assets/img/skills/blockchain.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/bitcoin.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>            
-            <img src="assets/img/skills/ethereum.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/binanceCoin.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/> */}
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            {/* <img src="assets/img/skills/git.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>             */}
-            <img src="assets/img/skills/github.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/gitlab.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/bitbucket.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/docker.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            <img src="assets/img/skills/mongodb.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/mysql.webp" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/sqlite.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/postgresql.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            {/* <img src="assets/img/skills/graphql.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/> */}
-            <img src="assets/img/skills/cloudmongo.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/firebase.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            {/* <img src="assets/img/skills/selenium.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/mocha.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/jasmine.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/postman.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/> */}
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            <img src="assets/img/skills/aws.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/googlecloud.svg" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/azure.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            
-            {/* <div className="h-16 md:h-24 p-6"><div className="border-l h-full"/></div> */}
-          
-            {/* <img src="assets/img/skills/windows.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/macox.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/>
-            <img src="assets/img/skills/linux.png" className="p-1 w-16 h-16 md:w-24 md:h-24"/> */}
-          </div>
-        
+      <div className="relative flex justify-center items-center mt-16 mb-8">
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+        <div className="text-gray-700 text-xl md:text-28 text-center font-medium md:w-64">Version Control</div>
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+      </div>
+      <div className="flex flex-wrap justify-center">          
+          <img src="assets/img/skills/git.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>            
+          <img src="assets/img/skills/github.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/gitlab.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/bitbucket.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+      </div>
+
+      <div className="relative flex justify-center items-center mt-16 mb-8">
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+        <div className="text-gray-700 text-xl md:text-28 text-center font-medium md:w-64">Other</div>
+        <div className="hidden md:block w-40 h-1 bg-gray-500"/>
+      </div>
+      <div className="flex flex-wrap justify-center">          
+          <img src="assets/img/skills/graphql.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/webRTC.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/docker.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>                      
+          <img src="assets/img/skills/aws.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/googlecloud.svg" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
+          <img src="assets/img/skills/azure.png" className="p-1 w-12 h-12 md:w-24 md:h-24"/>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const Header = () => {
     setScrolled((offset>70)?true:false);
   }    
   useEffect(() => {
-      window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll)
   })
 
   const navbarClasses = (scrolled)?'navbar-header sticky relative':'navbar-header relative';
