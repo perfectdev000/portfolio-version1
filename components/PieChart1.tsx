@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 var chartdata={
-  series:[26, 25, 10, 23, 5,4,7],
-  labels:["JavaScript", "TypeScript", "SCSS", "Python", "C++/C#", "PHP", "Other"]
+  series:[29, 27, 11, 25, 8],
+  labels:["JavaScript", "TypeScript", "SCSS", "Python", "Other"]
 }
 type PieChartProps = {
   // chartdata:{
@@ -23,10 +23,8 @@ export default class PieChart1 extends React.Component<PieChartProps, PieChartSt
     // optional second annotation for better type inference    
   };
   render() {
-    return (
-      
-      <Chart options={chartdata} type="pie" width="100%" series={chartdata.series} />
-       
+    return (      
+      <Chart options={chartdata} type="pie" width="100%" series={chartdata.series} />       
     );
   }
 }

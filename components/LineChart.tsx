@@ -3,12 +3,10 @@ import dynamic from 'next/dynamic'
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const series =  [
-  { name: "LAMP stack",data: [55, 47, 21, 17, 9]},
-  { name: "MERN Stack",data: [0, 0, 11, 34, 86 ]},
-  { name: "Web Development",data: [ 31, 23, 49, 62, 66 ]},
-  { name: "Mobile Development",data: [23, 27, 21, 18, 24 ]} ,
-  { name: "Desktop Development",data: [46, 54, 22, 15, 8 ]} ,
-  { name: "Data Science",data: [18, 32, 19, 23, 15 ]} 
+  { name: "Frontend",data:  [21, 16, 34, 67, 86]},
+  { name: "Backend",data:   [19, 13, 15, 34, 35]},  
+  { name: "Mobile-UI",data: [17, 20, 21, 24, 23]},
+  { name: "Other",data:     [32, 27, 19, 23, 15]}
 ];
 let data:{};
 data =  {
