@@ -1,16 +1,17 @@
 import React from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
-
-import { FaAngleUp, FaFileInvoice } from 'react-icons/fa';
+import Image from 'next/image'
+import { FaAngleUp} from 'react-icons/fa';
 
 import Header from "components/header/Header"
 import Footer from 'components/footer/Footer';
 
-import ParticleImg from 'components/ParticleImg';
+// import ParticleImg from 'components/ParticleImg';
 import SlideImgItem from 'components/SlideImgItem';
 import SkillViewChart from 'components/SkillViewChart';
-import SkillsView from 'components/SkillsView';
+// import SkillsView from 'components/SkillsView';
+import SkillsText from 'components/SkillsText';
 import Link from 'next/link';
 
 type Props = {  
@@ -22,6 +23,11 @@ type ContactState = {
   subject:string,
   message:string,
 }
+
+// const myLoader = ({ src, width, quality }) => {
+//   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+// }
+
 class Home extends React.Component<Props, ContactState> { 
 
   form = React.createRef<HTMLFormElement>();
@@ -61,15 +67,18 @@ class Home extends React.Component<Props, ContactState> {
             <div className='grid grid-cols-1 md:grid-cols-2 h-[100vh] md:h-[700px] pt-[70px] relative z-10'>              
                 <div className='flex justify-center items-center p-8 relative'>
                   <div className='relative'>
-                    <img src="assets/img/text.png" className='h-[25vh] md:h-auto'/>
-                    <div className='md:w-full flex justify-center'>
+                    <p className='text-yellow-500 text-center text-26 md:text-40 font-medium p-4'>I&apos;m <b className='text-32 md:text-60'>Andrey Ershov</b></p>
+                    <div className='text-white text-center text-26 md:text-40 font-medium p-4'>10+ Years of Hands-On Experience</div>
+                    <div className='md:w-full flex justify-center mt-4'>
                       <button className="btn btn-here bg-white hover:bg-black border-2 border-white font-medium hover:text-white text-black px-6 py-3" type="submit" id="sendMessageButton"
                         style={{transition: "ease-out 0.3s",boxShadow: "rgba(0, 0, 0, 0.7) 3px 6px 5px"}}>Contact Me</button>
                     </div>
                   </div>
                 </div>
                 <div className='flex justify-center items-start md:items-center relative p-8'>
-                  <img src="assets/img/man1.png" className='w-[50%] h-auto'/>                  
+                  <div className='w-[200px] h-[200px] md:w-[300px] md:h-[300px] relative'>
+                    <Image src="/assets/img/man1.png" alt="Avatar" layout='fill'/>
+                  </div>
                 </div>
             </div>
             
@@ -82,19 +91,16 @@ class Home extends React.Component<Props, ContactState> {
               <div className='text-xl md:text-40 text-center text-gray-700 font-bold md:mt-8 mb-8'>ABOUT ME</div>
               <div className='md:flex md:items-center md:mb-8 ' >
                 <div className='text-base md:text-lg font-medium text-gray-500 md:px-8 mb-4'>
-                  I&apos;m Andrey from Russia and have 10+ years of hands-on experience in Web, Mobile and Desktop App.<br/>
-                  I got my Bachelor of Computer Science in 2011 and I&apos;ve been working as a professional software developer since 2012. During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill fields.<br/>
-                  Implemented Web & Mobile Development from concept through deployment and worked on lots of small and large scale projects.<br/>
+                  I&apos;m Andrey from Russia and have 10+ years of hands-on experience.<br/>
+                  I got my Bachelor of Computer Science in 2011 and I&apos;ve been working as a professional software developer since 2012. 
+                  During that time, I learned and experienced related technologies and improved myself and accumulated strong skills and a wealth of experience in my skill field.<br/>
+                  Have experience in Web and Mobiel UI from concept through deployment and worked on lots of small and large scale projects.<br/>
                   I am honest and hardworking and always like new technology and challenge.<br/>
                   I prefer to build trust and a long-term relationships.<br/>
                   <br/>
-                  ✅ Education | <span className='text-red'>Bachelor of Computer Science</span> | Kuban State Technological University | 2011<br/>
-                  ✅ Experience | Frontend Developer | <span className='text-red'>ASPIRITY</span> | From 2013 to 2017<br/>
-                  ✅ Experience | Full Stack Developer | <span className='text-red'>Artezio</span> | From 2017 to 2020<br/>
-                  <br/>
                   <Link href={"https://cvdesignr.com/p/618960fde7a23"}>
                     <a target={"_blank"} className='text-base font-medium text-blue-800 underline hover:text-blue-900 flex justify-start items-center pl-8'>
-                      <FaFileInvoice/><div className=' font-semibold'>&nbsp;My Resume</div>
+                      {/* <FaFileInvoice/><div className=' font-semibold'>&nbsp;My Resume</div> */}
                     </a>
                   </Link>
                 </div>
@@ -109,20 +115,20 @@ class Home extends React.Component<Props, ContactState> {
                 My Excellent Portfolio
               </div>
               <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
-                <SlideImgItem imgURL={"assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + TypeScript + Node.js + TailwindCSS + SCSS + GraphQL"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={"Three.js + WebGL"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/alethea.png"} imgLink={"https://alethea.ai/"} skillContent={"React + Node.js + WebGL + Video.js + BlockChain + NFT"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={"Backbone.js + particle.js + GoogleAPI + Python + Django"} />
-                <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + Node.js + TypeScript + Three.js + NFT token"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + TypeScript + Node.js + TailwindCSS + SCSS + GraphQL"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={"Three.js + WebGL"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/alethea.png"} imgLink={"https://alethea.ai/"} skillContent={"React + Node.js + WebGL + Video.js + BlockChain + NFT"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={"Backbone.js + particle.js + GoogleAPI + Python + Django"} />
+                {/* <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + Node.js + TypeScript + Three.js + NFT token"} /> */}
                 <SlideImgItem imgURL={"my-portfolio"} imgLink={"https://perfectdev000.github.io/Particle-Image/"} skillContent={"Node.js + WebGL + Three.js"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/test.momnpophub.png"} imgLink={"https://test.momnpophub.com/"} skillContent={"React + Redux + Node.js + Express.js + MongoDB"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={"BootStrap4 + particle.js + PHP"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={"React + Next.js + Node.js"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={"React + Chart.js + BlockChain + UltraNote"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/bluestarcoffeeroasters.png"} imgLink={"https://bluestarcoffeeroasters.com/"} skillContent={"React + tailwindCSS + Shopify"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/lusion.png"} imgLink={"https://lusion.co/"} skillContent={"Three.js + WebGL"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/dnb.png"} imgLink={"https://dnb.ru/"} skillContent={"BootStrap + Python/Django"} />
-                <SlideImgItem imgURL={"assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={"PHP/Laravel"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/test.momnpophub.png"} imgLink={"https://test.momnpophub.com/"} skillContent={"React + Redux + Node.js + Express.js + MongoDB"} />
+                {/* <SlideImgItem imgURL={"/assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={"BootStrap4 + particle.js + PHP"} /> */}
+                {/* <SlideImgItem imgURL={"/assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={"React + Next.js + Node.js"} /> */}
+                {/* <SlideImgItem imgURL={"/assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={"React + Chart.js + BlockChain + UltraNote"} /> */}
+                <SlideImgItem imgURL={"/assets/img/portfolio/bluestarcoffeeroasters.png"} imgLink={"https://bluestarcoffeeroasters.com/"} skillContent={"React + tailwindCSS + Shopify"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/lusion.png"} imgLink={"https://lusion.co/"} skillContent={"Three.js + WebGL"} />
+                <SlideImgItem imgURL={"/assets/img/portfolio/dnb.png"} imgLink={"https://dnb.ru/"} skillContent={"BootStrap + Python/Django"} />
+                {/* <SlideImgItem imgURL={"/assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={"PHP/Laravel"} /> */}
               </div>
             </div>
             {/* <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/> */}
@@ -132,19 +138,22 @@ class Home extends React.Component<Props, ContactState> {
           {/* ----------skill-------  */}
           <div id='skill' className="glory-skill p-8" style={{backgroundColor:'#D9EEE1'}}>
             <div className='title w-full text-center font-bold text-32 md:text-45 text-gray-700 pb-8 md:mt-8'>Skill Service</div>
-            <SkillViewChart/>
-            <SkillsView/>
+            <div className='grid grid-cols-1 md:grid-cols-5'>
+              <div className='grid-cols-1 md:col-span-2 items-center'><SkillViewChart/></div>
+              <div className='grid-cols-1 md:col-span-3'><SkillsText/></div>
+            {/* <SkillsView/> */}            
+            </div>
           </div>
 
           {/* ----------contact-------  */}
           <div id='contact' className="glory-contact" style={{backgroundColor:'#000000'}}>            
             <div className='md:flex items-center'>
               <div className='hidden md:block w-1/6'></div>
-              <div className='md:w-2/6 justify-center items-center p-8 h-[350px]'>
+              <div className='md:w-2/6 justify-center items-center p-8 h-[200px] md:h-[350px]'>
                 {/* <img src='assets/img/contact.png' className='w-full h-full p-8'/> */}
                 <iframe src='/mailbox' className='w-full h-full '/>
               </div>
-              <div className='h-full w-full md:w-2/6 text-base font-medium text-white p-8 flex items-center justify-center'>
+              <div className='h-full w-full md:w-2/6 text-base font-medium text-white px-8 md:pt-8 pb-8 flex items-center justify-center'>
                   <div className="contact-form w-full h-full">
                     <div id="success"></div>
                     <form name="sentMessage w-full h-full" id="contactForm" ref={this.form} >

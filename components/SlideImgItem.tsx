@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from 'next/link'
+import Image from 'next/image'
 export default function SlideImgItem({imgURL, imgLink, skillContent}) {  
   return (
     <div className="w-full h-full p-2">      
@@ -11,7 +12,10 @@ export default function SlideImgItem({imgURL, imgLink, skillContent}) {
                 (imgURL==='my-portfolio')?
                 <iframe src={imgLink} className="w-full h-full shadown-md "/>
                 :
-                <img src={imgURL} className="w-full h-full shadown-md "/>
+                <div className="w-full h-full shadown-md ">
+                  <Image src={imgURL} alt="Portfolio" layout="fill"/>
+                </div>
+                
               }
             </div>
             <div className="bg-white font-medium text-base text-gray-500 text-center p-2 h-16 flex justify-center items-center">
