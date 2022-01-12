@@ -1,7 +1,7 @@
 import * as React from "react";
 export default function SkillsText() {
   return (
-    <div className="w-full h-full text-base md:text-22 text-gray-500 font-normal">
+    <div className="w-full h-full text-base md:text-lg text-gray-500 font-normal md:pl-4">
       <div className="flex mb-1">✅<div className="pl-1">Pixel-Perfect and Mobile Responsive Design Expertise</div></div>
       <div className="flex mb-1">✅<div className="pl-1">Expertise in HTML, HTML5, CSS, SCSS</div></div>
       <div className="flex mb-1">✅<div className="pl-1">Expertise of TypeScript</div></div>
