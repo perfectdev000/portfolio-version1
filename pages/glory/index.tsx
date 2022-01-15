@@ -8,10 +8,10 @@ import Header from "components/header/Header"
 import Footer from 'components/footer/Footer';
 
 // import ParticleImg from 'components/ParticleImg';
-import SlideImgItem from 'components/SlideImgItem';
 import SkillViewChart from 'components/SkillViewChart';
 // import SkillsView from 'components/SkillsView';
 import SkillsText from 'components/SkillsText';
+import Pagination from 'components/Pagination';
 import Link from 'next/link';
 
 type Props = {  
@@ -114,24 +114,13 @@ class Home extends React.Component<Props, ContactState> {
               <div className='title w-full text-center font-bold text-32 md:text-45 text-white mb-8 md:mt-8'>
                 My Excellent Portfolio
               </div>
-              <div className='grid grid-cols-1 md:grid-cols-3 relative gap-8'>
-                <SlideImgItem imgURL={"/assets/img/portfolio/BlueJestic.png"} imgLink={"https://bluejestic.com/"} skillContent={"React + React Hook + Next.js + TypeScript + Node.js + TailwindCSS + SCSS + GraphQL"} />
-                <SlideImgItem imgURL={"/assets/img/portfolio/campoallecomete.png"} imgLink={"http://www.campoallecomete.it"} skillContent={"Three.js + WebGL"} />
-                <SlideImgItem imgURL={"/assets/img/portfolio/alethea.png"} imgLink={"https://alethea.ai/"} skillContent={"React + Node.js + WebGL + Video.js + BlockChain + NFT"} />
-                <SlideImgItem imgURL={"/assets/img/portfolio/exante.png"} imgLink={"https://exante.eu"} skillContent={"Backbone.js + particle.js + GoogleAPI + Python + Django"} />
-                {/* <SlideImgItem imgURL={"my-portfolio"} imgLink={"/coin3d"} skillContent={"Next.js + Node.js + TypeScript + Three.js + NFT token"} /> */}
-                <SlideImgItem imgURL={"my-portfolio"} imgLink={"https://perfectdev000.github.io/Particle-Image/"} skillContent={"Node.js + WebGL + Three.js"} />
-                <SlideImgItem imgURL={"/assets/img/portfolio/test.momnpophub.png"} imgLink={"https://test.momnpophub.com/"} skillContent={"React + Redux + Node.js + Express.js + MongoDB"} />
-                {/* <SlideImgItem imgURL={"/assets/img/portfolio/koenigandreas.png"} imgLink={"https://koenigandreas.com"} skillContent={"BootStrap4 + particle.js + PHP"} /> */}
-                {/* <SlideImgItem imgURL={"/assets/img/portfolio/lonelyplanet.png"} imgLink={"https://www.lonelyplanet.com"} skillContent={"React + Next.js + Node.js"} /> */}
-                {/* <SlideImgItem imgURL={"/assets/img/portfolio/ultranote.png"} imgLink={"https://cloud.ultranote.org"} skillContent={"React + Chart.js + BlockChain + UltraNote"} /> */}
-                <SlideImgItem imgURL={"/assets/img/portfolio/bluestarcoffeeroasters.png"} imgLink={"https://bluestarcoffeeroasters.com/"} skillContent={"React + tailwindCSS + Shopify"} />
-                <SlideImgItem imgURL={"/assets/img/portfolio/lusion.png"} imgLink={"https://lusion.co/"} skillContent={"Three.js + WebGL"} />
-                <SlideImgItem imgURL={"/assets/img/portfolio/dnb.png"} imgLink={"https://dnb.ru/"} skillContent={"BootStrap + Python/Django"} />
-                {/* <SlideImgItem imgURL={"/assets/img/portfolio/cools.png"} imgLink={"https://cools.com"} skillContent={"PHP/Laravel"} /> */}
+              <div id='portfolio-view' 
+              // className='grid grid-cols-1 md:grid-cols-3 relative gap-8'
+                className='text-white bg-translate'
+              >
+                <Pagination/>
               </div>
-            </div>
-            {/* <iframe src='/assets/pages/tsparticle/index.html' className='absolute left-0 top-0 w-full h-full z-0'/> */}
+            </div>            
             <iframe src='/resume' className='absolute left-0 top-0 w-full h-full z-0'/>
           </div>
 

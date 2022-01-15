@@ -83,6 +83,16 @@ body{
     border:solid 2px black;
     color: black;
   }
+  #portfolio-view{
+    ul{
+      display: flex;
+      justify-content: center;
+      li{
+        padding: 5px 10px;
+        font-size: 20px;
+      }      
+    }
+  }
 
 }
 canvas {
